@@ -1,0 +1,139 @@
+body {
+    font-size: 1.307692307692308em;
+    margin: 0;
+    font-family: 'Roboto' ;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-stroke: 0.45px rgba(0, 0, 0, 0.10);
+   
+    /* background-color: rgba(0,0,0,.01); */
+    color: rgba(0,0,0,.94);
+
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+
+}   
+span.fsize {
+    font-size: 1.307692307692308em;
+}
+.fpadding {
+    padding: 1.7100591715976337em;
+}
+row#body {
+    height: 100%;
+    width: 100%;
+    /* width: 60em; */
+    margin: auto;
+}
+
+row#body >column {
+    height: 100%;
+    width: 100%;
+}
+row {
+    display: flex;
+}
+
+column {
+    display: flex;
+    flex-direction: column;
+}
+
+row.stuffrowspans > span{
+
+    padding: 0 .25em;
+}
+
+row.stuffrowspans > span.active{
+
+    font-weight: 500;
+}
+
+span.btn0 {
+    padding: .307em 1.307692307692308em;
+    background-color: #F0F0F5;
+    text-align: center;
+    display: flex;
+    width: fit-content;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: .30em;
+}
+
+
+span.btn1 {
+    padding: .307em 1.307692307692308em;
+    background-color:transparent;
+    text-align: center;
+    display: flex;
+    width: fit-content;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: .30em;
+    color: white;
+}
+
+img {
+    height: 2.236231224396906em;
+    margin-right: 0.79em;
+}
+
+a {color:#FF0000; text-decoration: none;}         /* Unvisited link  */
+a:visited {color: unset} /* Visited link    */
+a:hover {color:unset;}   /* Mouse over link */
+a:active {color:#0000FF;}
+display {
+    align-self: center;
+    transition-duration: 355ms;
+}
+
+display.mobile0 {
+    height: 30em ;
+    width: 16.88em;
+
+    background-color: white;
+}
+
+display.mobile1 {
+    height: 30em;
+    width: 16.91em;
+    background-color: white;
+}
+
+display.mobile2 {
+    height: 30em;
+    width: 16.9em;
+    background-color: white;
+}
+
+display.mobile3 {
+    height: 30em;
+    width: 14.98em;
+    background-color: white;
+}
+
+
+display.web0 {
+    height: 22em;
+    width: 40.69em;
+
+    background-color: white;
+}
+
+.mustdissapear, .mustappear {
+    transition-duration: 357ms;
+}
+
+.mustdissapear {
+    opacity: 100;
+}
+
+.mustappear {
+    opacity: 0;
+}
