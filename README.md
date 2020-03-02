@@ -3,7 +3,7 @@
 Hi i am the author [SotoArmando](https://github.com/SotoArmando) of this project and this is my portfolio approach.
 
 
-Live version: https://sotoarmando.github.io/Portfolio-Approach/dist/index.html
+Live version: [Link](https://sotoarmando.github.io/Portfolio-Approach/dist/index.html)
 
 ### Run this project
 
