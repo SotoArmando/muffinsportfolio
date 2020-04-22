@@ -73,70 +73,12 @@ const apps = [
   },
 ]
 
-let index = 1
-let toggled = false
-function toggleopacity_over100and0() {
-  
-  elements = (toggled) ? document.querySelectorAll(".mustappear"): document.querySelectorAll(".mustdissapear");
-  if (toggled) {
-    for (let i = 0; i < elements.length; i ++) {
-      console.log("toggleopacity_over100and0 ", i)
-      elements[i].classList.add("mustdissapear");
-      elements[i].classList.remove("mustappear");
-    }
-  } else {
-    for (let i = 0; i < elements.length; i ++) {
-      console.log("toggleopacity_over100and0 ", i)
-      elements[i].classList.remove("mustdissapear");
-      elements[i].classList.add("mustappear");
-    }
-  }
-
-  toggled = !toggled;
-}
-
-
-var t=setInterval(function () {
-  console.log(index)
-  toggleopacity_over100and0();
-  let app = apps[index]
-  let display = document.querySelector("display");
-  let img = document.querySelector("display > img");
-  let descriptionspans = document.querySelectorAll("#displaydescription span"); 
-  let flagspans = document.querySelector("row.stuffrowspans"); 
-
-  setTimeout(() => {
-    img.setAttribute("src", app.src);
-    display.classList.forEach((entry,value) => display.classList.remove(entry))
-    display.classList.add(app.class);
-
-    descriptionspans[0].innerHTML = app.desc;
-    descriptionspans[1].innerHTML = app.platform;
-    descriptionspans[2].innerHTML = app.stacks;
-    descriptionspans[3].querySelector("a").setAttribute("href", app.link);
-    descriptionspans[3].querySelector("a").innerHTML = (app.platform === "Web") ? "Live Link" : "Store Link"
-    descriptionspans[3].querySelector("a").innerHTML = (app.platform === "Not published") ? "Preview Link" : descriptionspans[3].querySelector("a").innerHTML
-    
-  
-    flagspans.innerHTML = ""
-    flagspans.innerHTML += `<span class="btn1" style="margin-left: .79em;">${app.platform}</span>`
-    flagspans.innerHTML += (app.isgame) ? `<span class="btn1" style="margin-left: .79em;">Game</span>` : ''
-
-  }, 355);
-  
-
-
-
-
-  index += 1;
-  if (apps.length == index) {
-    index = 0;
-  }
-  setTimeout(() => {
-    toggleopacity_over100and0();
-  }, 355 + 355);
-},6000);
-
-
-
-
+let interval = setInterval(() => {
+  const states = ['visible','toggled','hidden'];
+  const ele =document.querySelector(".device-0");
+  const state = ele.classList[1];
+  const next = (states.indexOf(state) + 1) % 3;
+  console.log(next)
+  ele.classList.remove(state)
+  ele.classList.add(states[next])
+},1000)
