@@ -226,6 +226,8 @@ div.grid6644 {
     transform: translate(-300pt, 0);
     opacity: 0;
 }
+
+
 .not-wrap {
     white-space: nowrap;
 }
@@ -277,4 +279,15 @@ div.grid6644 {
 
 .col.bg0.flexcenter {
     transition-duration: 355ms;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:visited {
+    color: white;
+    text-decoration: none;
 }
