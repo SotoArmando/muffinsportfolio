@@ -23,6 +23,9 @@
                 Am a geek, games lover developer who really enjoy’s playing and
                 making games and this is my approach
                 creating my own web page as a web developer.
+                <br>
+                <br>
+                Looking for Web Projects? <span style="display: contents;color:blue;cursor: pointer;" onclick="togglewebprojectspagenosidemenu()" >Click here!</span>
             </span>
             <!-- <div class="flexrow bsize0 space-between">
                 <span class="fw-500 fsize1">Watch me close</span>
@@ -119,7 +122,7 @@
             </span>
             <span class="bsize0"></span>
             <div style="height: 100vh;">
-                <img height="100%   " src="./pic/web/Group 37@2x.png" style="transform: translateX(-30%);">
+                <img height="100%   " src="./pic/web/Group 37.png" style="transform: translateX(-30%);">
             </div>
             <div style="height: 100vh;background-color: #FFC21D;">
                 <img height="100%   " src="./pic/web/Group 36@2x.png" style="transform: translateX(-30%);">
@@ -294,13 +297,17 @@
         document.querySelector('.webprojectspage').classList.toggle('toggled')
         document.querySelector('.mobileprojectspage').classList.toggle('toggled')
     }
+
     const togglewebprojectspage = () => {
         togglemenu();
         document.querySelector('.mobileprojectspage').classList.toggle('toggled')
         document.querySelector('.webprojectspage').classList.toggle('toggled')
     }
 
-
+    const togglewebprojectspagenosidemenu = () => {
+        document.querySelector('.mobileprojectspage').classList.toggle('toggled')
+        document.querySelector('.webprojectspage').classList.toggle('toggled')
+    }
     const interval = setInterval(() => {
 
         const states = ['visible', 'notvisible'];
