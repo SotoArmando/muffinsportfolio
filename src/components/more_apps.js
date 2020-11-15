@@ -8,8 +8,8 @@ export default function More_apps() {
                 <div className="col">
                     <span className="title">More Apps</span>
                     <div className="row row_50">
-                        <a href="/viewport?page=muffinsmastermind"><span>Muffinsmastermind</span></a>
-                        <a href="/viewport?page=battleships"><span>Battleships</span></a>
+                        <a href="/viewport/muffinsmastermind"><span>Muffinsmastermind</span></a>
+                        <a href="/viewport/battleships"><span>Battleships</span></a>
                     </div>
                 </div>
 

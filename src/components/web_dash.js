@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { useSprings, animated, interpolate } from 'react-spring'
 import Contact_me from "./contact_me";
 import More_apps from "./more_apps";
@@ -66,7 +67,7 @@ export default function Web_dash() {
     const [loaded, set_loaded] = useState({
         width: window.visualViewport.width,
         load: false,
-        page: (new URL(window.location)).searchParams.get("page"),
+        page: useParams().page,
     });
 
 

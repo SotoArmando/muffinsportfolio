@@ -58,7 +58,7 @@ export default function App() {
       <TransitionGroup>
         <CSSTransition in={true} classNames="clean" key={location.key} timeout={357}>
           <Switch location={location}>
-            <Route path="/viewport" ><Web_dash /></Route>
+            <Route path="/viewport/:page" ><Web_dash /></Route>
             <Route path="/" ><Home_dash /></Route>
           </Switch>
         </CSSTransition>
