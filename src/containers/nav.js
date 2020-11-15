@@ -20,8 +20,8 @@ export default function Nav() {
             </div>
             <div className="nav_side_body col">
                 <Link to='/' onMouseUp={handleSidenavtoggle}><span>Home</span></Link>
-                <Link to='/viewport/?page=muffinsmastermind' onMouseUp={handleSidenavtoggle}><span>Web apps</span></Link>
-                <Link to='/viewport/?page=muffinsmastermind' onMouseUp={handleSidenavtoggle}><span>Mobile apps</span></Link>
+                <Link to='/viewport/muffinsmastermind' onMouseUp={handleSidenavtoggle}><span>Web apps</span></Link>
+                <Link to='/viewport/muffinsmastermind' onMouseUp={handleSidenavtoggle}><span>Mobile apps</span></Link>
                 <a onClick={handleSidenavtoggle}><span>Close</span></a>
                 <div className="col col_3">
                     <span className="span_0_white">
