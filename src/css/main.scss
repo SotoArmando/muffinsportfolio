@@ -1709,7 +1709,10 @@ svg path {
         }
     }
 }
-
+.Mobile_dash {
+    width: 100% !important;
+    min-height: 100vh !important;
+}
 .More_apps {
     display: flex;
     justify-content: center;
@@ -1735,11 +1738,12 @@ svg path {
         flex-wrap: wrap;
         .row {
             justify-content: space-between;
+            min-width: calc(100vh * 1.3333);
 
         }
         .row > a {
-            max-width: calc(((100vh * 1.3333) / 2) - 1rem);
-            min-width: calc(((100vh * 1.3333) / 2) - 1rem);
+            max-width: calc( ((100vh * 1.3333) / 2) - (1.41015625rem / 2));
+            min-width: calc( ((100vh * 1.3333) / 2) - (1.41015625rem / 2));
             display: flex;
             justify-content: center;
             align-items: center;
