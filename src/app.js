@@ -21,6 +21,7 @@ import './css/1024px.scss';
 import './css/font/roboto.css'
 import './css/font/secularone.css'
 import { set } from 'lodash-es';
+import Mobile_dash from './components/mobile_dash';
 
 
 export default function App() {
@@ -58,7 +59,8 @@ export default function App() {
       <TransitionGroup>
         <CSSTransition in={true} classNames="clean" key={location.key} timeout={357}>
           <Switch location={location}>
-            <Route path="/viewport/:page" ><Web_dash /></Route>
+            <Route path="/web/:page" ><Web_dash /></Route>
+            <Route path="/mobile/:page" ><Mobile_dash /></Route>
             <Route path="/" ><Home_dash /></Route>
           </Switch>
         </CSSTransition>

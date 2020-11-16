@@ -16,5 +16,5 @@ export default function More_apps() {
 
             </div>
         </div>
-    )
+    )   
 }
