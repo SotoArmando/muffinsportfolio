@@ -22,8 +22,7 @@ export default function Nav() {
                 <Link to='/' onMouseUp={handleSidenavtoggle}><span>Home</span></Link>
                 <Link to='/web/muffinsmastermind' onMouseUp={handleSidenavtoggle}><span>Web projects</span></Link>
                 <Link to='/mobile/muffinsmastermind' onMouseUp={handleSidenavtoggle}><span>Mobile projects</span></Link>
-                <Link to='/web/muffinsmastermind' onMouseUp={handleSidenavtoggle}><span>Hackerrank</span></Link>
-                <Link to='/web/muffinsmastermind' onMouseUp={handleSidenavtoggle}><span>Repl.it</span></Link>
+    
                 <a onClick={handleSidenavtoggle}><span>Close</span></a>
                 <div className="col col_3">
                     <span className="span_0_white">
