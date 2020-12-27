@@ -1401,6 +1401,21 @@ svg path {
     border-radius: 0 !important;
 }
 
+.special_div_1 {
+    background-position: top !important;
+    background-size: 110% !important;
+    margin-top: 1rem * fontsize(1);
+    min-width: 100%;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+    border-radius: 0 !important;
+}
+
 .nice_msg_0 {
     top: 0;
     right: 0;
@@ -1577,6 +1592,7 @@ svg path {
             display: flex;
             justify-content: center;
             align-items: center;
+			
         }
 
     }
@@ -1648,6 +1664,8 @@ svg path {
             padding: (1rem * fontsize(11)) - (1rem * fontsize(10));
             box-sizing: border-box;
             border-radius: 7.5px;
+			
+			margin: .5rem 0 !important;
 
             &:hover {
                 border: 3px solid rgba(250, 250, 250, 0);
@@ -1662,6 +1680,7 @@ svg path {
 
             &:last-of-type {
                 margin-left: 1rem * fontsize(1);
+				
             }
 
             >span {
