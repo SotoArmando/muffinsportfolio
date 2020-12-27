@@ -42,7 +42,15 @@ export default function App() {
 	  || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
 	}
 	
+	function isWindows() {
+		return navigator.platform.indexOf('Win') > -1;
+	}
 	
+	if (isWindows){
+		if (window.devicePixelRatio > 1)  {
+			document.querySelector("html").style.fontSize =  "0.842105263157895rem";
+		}
+	}
   // var mouse_monitor = function (e) {
 
   //   var x = e.pageX;
