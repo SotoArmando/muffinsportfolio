@@ -97,10 +97,10 @@ export default function Mobile_dash() {
     useEffect(() => {
         setTimeout(() => handleNextParent(), 1000 * 6);
         if (!load) {
-            document.querySelector('body').style.margin = '';
-            document.querySelector('body').style.width = '';
-            document.querySelector('#app > div.nav > div.nav_body.row').style.borderRight = '';
-            document.querySelector('#root').style.backgroundColor = ''
+            // document.querySelector('body').style.margin = '';
+            // document.querySelector('body').style.width = '';
+            // document.querySelector('#app > div.nav > div.nav_body.row').style.borderRight = '';
+            // document.querySelector('#root').style.backgroundColor = ''
             setload(true);
         }
     })
@@ -119,7 +119,7 @@ export default function Mobile_dash() {
             >
                 <div className="viewp ">
                     <div className="header">
-                        <a href={link} className="row row_50 row_1">
+                        <a href={link} className="row row_50 row_1 pad_l27 pad_r27">
                             <span className={"svg " + ((stacks == "Adobe XD") ? "adobexd" : "googleplay")}></span>
                             <div className="col">
                                 <span className="span_1">{title}</span>
@@ -144,7 +144,7 @@ export default function Mobile_dash() {
             >
                 <div className="viewp">
                     <div className="header">
-                        <a href={b.link} className="row row_50 row_1">
+                        <a href={b.link} className="row row_50 row_1 pad_l27 pad_r27">
                             <span className={"svg " + ((b.stacks == "Adobe XD") ? "adobexd" : "googleplay")}></span>
                             <div className="col">
                                 <span className="span_1">{b.title}</span>
@@ -167,7 +167,7 @@ export default function Mobile_dash() {
             >
                 <div className="viewp">
                     <div className="header">
-                        <a href={link} className="row row_50 row_1">
+                        <a href={link} className="row row_50 row_1 pad_l27 pad_r27">
                             <span className={"svg " + ((stacks == "Adobe XD") ? "adobexd" : "googleplay")}></span>
                             <div className="col">
                                 <span className="span_1">{title}</span>
@@ -192,7 +192,7 @@ export default function Mobile_dash() {
             >
                 <div className="viewp">
                     <div className="header">
-                        <a href={link} className="row row_50 row_1">
+                        <a href={link} className="row row_50 row_1 pad_l27 pad_r27">
                             <span className={"svg " + ((stacks == "Adobe XD") ? "adobexd" : "googleplay")}></span>
                             <div className="col">
                                 <span className="span_1">{title}</span>

@@ -8,7 +8,7 @@ export default function Nav() {
     return (
         <div className="nav">
             <div className="nav_body row ">
-                <div>
+                <div className="corebox_x8 mobilecorebox_x2">
                     <div className="svg menu" onClick={handleSidenavtoggle} />
                 </div>
                 <div>
@@ -20,16 +20,16 @@ export default function Nav() {
             </div>
             <div className="nav_side_body col">
                 <Link to='/' onMouseUp={handleSidenavtoggle}><span>Home</span></Link>
-                <Link to='/web/muffinsmastermind' onMouseUp={handleSidenavtoggle}><span>Web projects</span></Link>
-                <Link to='/mobile/muffinsmastermind' onMouseUp={handleSidenavtoggle}><span>Mobile projects</span></Link>
+                <Link to='/web/muffinsmastermind' onMouseUp={handleSidenavtoggle}><span>Projects</span></Link>
+
     
                 <a onClick={handleSidenavtoggle}><span>Close</span></a>
                 <div className="col col_3">
                     <span className="span_0_white">
                         Armando Soto
                     </span>
-                    <div className="row row_0">
-                        <a href="https://www.linkedin.com/in/asotomelo/" className="svg linkedin" />
+                    <div className="row row_0 ">
+                        <a href="https://www.linkedin.com/in/asotomelo/" className="svg linkedin " />
                         <a href="https://github.com/SotoArmando" className="svg github" />
                         <a href="https://twitter.com/sotoarmando029" className="svg twitter" />
                         <a href="https://stackoverflow.com/users/5007444/sotoarmando" className="svg stack-overflow" />
