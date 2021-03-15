@@ -28,7 +28,7 @@ $core: 1;
 	}
 
 	.col.col_2.Mobile_display {
-		min-height: 100vh;
+		// min-height: 100vh;
 	}
 
 	div.good_display > div > div:nth-child(2) > div {
@@ -54,10 +54,7 @@ $core: 1;
 		margin: 0;
 	}
 	
-	div.good_display_container1 > span {
-		justify-content: center;
-		margin-bottom: 1rem;
-	}
+
 	
 	div.good_display > div > div:nth-child(1) > div.tags_row > div:nth-child(2) > a {
 		margin-bottom: 1rem;
