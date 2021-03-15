@@ -64,7 +64,7 @@ export default function Home_dash(props) {
                 </div>
             </div>
         </div>
-        <div className="corebox_15 col pad_l33 pad_r33 mobilepad_l27 mobilepad_r21 border_01 center items_center border_02 overflowhidden">
+        <div className="corebox_15 row pad_l33 pad_r33 mobilepad_l27 mobilepad_r21 border_01 center items_center border_02 overflowhidden basis_45 center" >
             <div className="col allsize">
                 <span className=" f800 fore_11 row start items_center corebox_5  ls_27 lh_2 ffam_0 f_3 ">About Me</span>
                 <div className="row wrap basis_46  start items_center    ">
@@ -79,6 +79,21 @@ export default function Home_dash(props) {
                     <span></span>
                 </div>
 
+            </div>
+            <div className="row center">
+                <img className="maxedcorebox_x5"  src={"https://d92mrp7hetgfk.cloudfront.net/images/sites/misc/SmallerMicroverselogo_revised/original.jpg?1581442029"} />
+            </div>
+        </div>
+
+        <div className="corebox_15 col pad_l33 pad_r33 mobilepad_l24 mobilepad_r21 border_01 center items_center border_02 overflowhidden">
+            <div className="col allsize">
+                <span className=" f800 fore_11 row start items_center corebox_5  ls_27 lh_2 ffam_0 f_3 ">Publications</span>
+
+                <div className="row wrap basis_44 corebox_12 start items_center nmar_l20 nmar_r20 ">
+                    <Projectm isFirst={true} name={"Career Karma Projects Spotlight: June 26th"} pic="pic_careerkarma_0" tags={["",""]} />
+                    <Projectm isLast={true} name={"HACKATHON Liderazgo Responsable"} tags={["",""]} pic="pic_liderazgo_0"/>
+                    {/* <Projectm name={"CAFAM Science Fair 2019"}  pic="pic_cafam_0" tags={["",""]} /> */}
+                </div>
             </div>
         </div>
         <div className="Contact_me1 row center corebox_18 mobilecorebox_18 mobilepad_l27 mobilepad_r27">
@@ -110,6 +125,7 @@ export default function Home_dash(props) {
                 <span className="bottom_title">© 2020  Sotoarmando</span>
             </div>
         </div>
+
     </div>
 
 }
