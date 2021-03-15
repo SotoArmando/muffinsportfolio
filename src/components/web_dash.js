@@ -82,10 +82,9 @@ export default function Web_dash() {
         if (load === false) {
             console.log("usin effect")
             window.addEventListener('scroll', handleScroll);
-            document.querySelector('body').style.margin = '0';
+
             document.querySelector('body').style.width = '100vw';
-            document.querySelector('#app > div.nav > div.nav_body.row').style.borderRight = '0';
-            document.querySelector('#root').style.backgroundColor = 'rgb(240, 240, 240)'
+            // document.querySelector('#root').style.backgroundColor = 'rgb(240, 240, 240)'
             set_loaded({ ...loaded, load: true });
         }
 
@@ -170,7 +169,7 @@ export default function Web_dash() {
                     <div>
                         <div className="good_display_picture" />
                         <div className="good_display_container1">
-                            <span className="span_6 fe5">{page}</span>
+                            <span className="span_6 fore_12 mobilepad_l24 f_3 f_m_3 f800 corebox_3 ls_27" >{page}</span>
                         </div>
                         <div className="tags_row">
                             <div>
@@ -181,10 +180,7 @@ export default function Web_dash() {
                                 <a className='btn' href={source} target="_blank"><span className="svg github" /><span>Source Code</span></a>
                             </div>
                         </div>
-                        <span className="good_display_container_1 good_text">
-
-                            <span className="center">Available for: Mobile and Desktop Screens</span>
-                        </span>
+                   
 
                     </div>
                     <div>
@@ -194,11 +190,11 @@ export default function Web_dash() {
                 </div>
 
             </div>
-            <div className="good_msg fe1" style={{ transition: 'opacity 357ms', opacity: (isoff && seconds < 2) ? 1 : 0, willChange: 'opacity' }}>Auto center in {seconds} seconds</div>
-            <div className="good_msg_bar">
+            <div className="good_msg fe1 mobilehide" style={{ transition: 'opacity 357ms', opacity: (isoff && seconds < 2) ? 1 : 0, willChange: 'opacity' }}>Auto center in {seconds} seconds</div>
+            <div className="good_msg_bar mobilehide">
                 <animated.div className="bar" style={{ transform: `scaleY(${c_1})`, willChange: 'transform' }} />
             </div>
-            <div className="good_msg_bar_back">
+            <div className="good_msg_bar_back mobilehide">
                 <div className="bar" >
                     <animated.div className="bar_msg" style={{ transform: `translateY(calc(${50 * c_1}vh - 100%))`, willChange: 'transform' }}> {msg[Math.floor((pic.length - .5) * c_1)]} </animated.div>
                 </div>

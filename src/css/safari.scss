@@ -1,0 +1,79 @@
+$core: 1;
+
+
+@function fontsize($exponents) {
+    $raised: 1;
+
+    @if ($exponents > 1) {
+        @for $i from 1 through $exponents - 1 {
+            $raised: $raised * 1.1875;
+        }
+    }
+
+    @return $raised * $core;
+}
+
+@supports (-webkit-touch-callout: none) {
+
+  
+	.row_50 >  * {
+		flex-basis: 100%;
+	}
+}
+
+
+@media (orientation: portrait) {
+	.row_50 > * {
+		flex-basis: 100%;
+	}
+
+	.col.col_2.Mobile_display {
+		// min-height: 100vh;
+	}
+
+	div.good_display > div > div:nth-child(2) > div {
+		margin: 0;
+		justify-content: center;
+		text-align: center;
+	}
+	
+	.good_display .good_display_container {
+		justify-content:center;
+		width: 100vw;
+		margin-top: 2.80415rem;
+		
+	}
+	
+	.good_display {
+		justify-content: flex-start;
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.good_display .tags_row {
+		margin: 0;
+	}
+	
+
+	
+	div.good_display > div > div:nth-child(1) > div.tags_row > div:nth-child(2) > a {
+		margin-bottom: 1rem;
+	}
+	
+	.good_container {
+		display: flex;
+		flex-direction: column;
+		& > * {
+
+			flex-basis: unset;
+			flex-grow: unset;
+		}
+	}
+
+	.nav_body > div {
+		min-width: 1rem * fontsize(8);
+		
+	}
+	
+
+}

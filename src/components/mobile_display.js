@@ -29,7 +29,7 @@ const apps = [
         link: "https://play.google.com/store/apps/details?id=cc.test.codi"
     },
     {
-        title: "Budgetboy Lite: Quick Budgeting",
+        title: "Budgetboy Lite",
         desc: "<b>Budgetboy</b> is An Easy way to manage a occational budget for quick, also you will find more functions with will help u get more sophisticated use of it.",
         platform: "Android",
         livelink: "https://play.google.com/store/apps/details?id=com.devindie.budgetmanager",
@@ -102,7 +102,7 @@ export default function Mobile_display() {
 
     
     return (
-        <div className={"col col_2 Mobile_display color_" + space_0 + " " + ((show_message_0) ? "next_isparent" : "")}>
+        <div className={"col col_2 corebox_18 mobilecorebox_16 Mobile_display " + space_0 + " " + ((show_message_0) ? "next_isparent" : "")}>
             <CSSTransition
                 in={show_message_0}
                 appear={true}
@@ -110,12 +110,12 @@ export default function Mobile_display() {
                 classNames="mobile_app"
             >
                 <div className="viewp ">
-                    <div className="header">
-                        <a href={link} className="row row_50 row_1">
-                            <span className={"svg " + ((stacks == "Adobe XD") ? "adobexd" : "googleplay")}></span>
+                    <div className="header f_1 pad_17 ">
+                        <a href={link} className="row row_50 row_1 pad_l23 pad_r33 corebox_6 items_center widthunset">
+                            <span className={"corebox_x2 svg " + ((stacks == "Adobe XD") ? "adobexd" : "googleplay")}></span>
                             <div className="col">
-                                <span className="span_1">{title}</span>
-                                <span>{((stacks == "Adobe XD") ? "Adobe xd" : "Google Playstore")}</span>
+                                <span className="span_1 corebox_0 start items_center">{title}</span>
+                                <span className="f_0">{((stacks == "Adobe XD") ? "Adobe xd" : "Google Playstore")}</span>
                             </div>
                         </a>
                         <a href={link} className="row row_50 row_1a">
@@ -123,7 +123,7 @@ export default function Mobile_display() {
 
                         </a>
                     </div>
-                    <div className={"mobile_app_jpg " + they[space_0]}></div>
+                    <div className={"backsize_17 mbacksize_15 mobile_app_jpg " + they[space_0]}></div>
                 </div>
             </CSSTransition>
 
@@ -135,19 +135,19 @@ export default function Mobile_display() {
 
             >
                 <div className="viewp">
-                    <div className="header">
-                        <a href={b.link} className="row row_50 row_1">
-                            <span className={"svg " + ((b.stacks == "Adobe XD") ? "adobexd" : "googleplay")}></span>
+                    <div className="header f_1 pad_17">
+                        <a href={b.link} className="row row_50 row_1 pad_l23 pad_r33 corebox_6 items_center widthunset">
+                            <span className={"corebox_x2 svg " + ((b.stacks == "Adobe XD") ? "adobexd" : "googleplay")}></span>
                             <div className="col">
-                                <span className="span_1">{b.title}</span>
-                                <span>{((b.stacks == "Adobe XD") ? "Adobe xd" : "Google Playstore")}</span>
+                                <span className="span_1 corebox_0 start items_center">{b.title}</span>
+                                <span className="f_0">{((b.stacks == "Adobe XD") ? "Adobe xd" : "Google Playstore")}</span>
                             </div>
                         </a>
                         <a href={link} className="row row_50 row_1a">
                             <span className={"svg eye"}></span>
                         </a>
                     </div>
-                    <div className={"mobile_app_jpg " + they[space_1]}></div>
+                    <div className={"backsize_17 mbacksize_15 mobile_app_jpg " + they[space_1]}></div>
                 </div>
             </CSSTransition>
 
@@ -158,12 +158,12 @@ export default function Mobile_display() {
                 classNames="mobile_app_detail"
             >
                 <div className="viewp">
-                    <div className="header">
-                        <a href={link} className="row row_50 row_1">
-                            <span className={"svg " + ((stacks == "Adobe XD") ? "adobexd" : "googleplay")}></span>
+                    <div className="header f_1 pad_17">
+                        <a href={link} className="row row_50 row_1 pad_l23 pad_r33  corebox_6 items_center widthunset">
+                            <span className={"corebox_x2 svg " + ((stacks == "Adobe XD") ? "adobexd" : "googleplay")}></span>
                             <div className="col">
-                                <span className="span_1">{title}</span>
-                                <span>{((stacks == "Adobe XD") ? "Adobe xd" : "Google Playstore")}</span>
+                                <span className="span_1 corebox_0 start items_center">{title}</span>
+                                <span className="f_0">{((stacks == "Adobe XD") ? "Adobe xd" : "Google Playstore")}</span>
                             </div>
                         </a>
                         <a href={link} className="row row_50 row_1a">
@@ -171,7 +171,7 @@ export default function Mobile_display() {
 
                         </a>
                     </div>
-                    <div className={"mobile_app_jpg mobile pic_" + space_2}></div>
+                    <div className={"mobile_app_jpg backsize_17 mbacksize_15 mobile pic_" + space_2}></div>
                 </div>
             </CSSTransition>
 
@@ -183,12 +183,12 @@ export default function Mobile_display() {
 
             >
                 <div className="viewp">
-                    <div className="header">
-                        <a href={link} className="row row_50 row_1">
-                            <span className={"svg " + ((stacks == "Adobe XD") ? "adobexd" : "googleplay")}></span>
+                    <div className="header f_1 pad_17">
+                        <a href={link} className="row row_50 row_1 pad_l23 pad_r33  corebox_6 items_center widthunset">
+                            <span className={"corebox_x2 svg " + ((stacks == "Adobe XD") ? "adobexd" : "googleplay")}></span>
                             <div className="col">
-                                <span className="span_1">{title}</span>
-                                <span>{((stacks == "Adobe XD") ? "Adobe xd" : "Google Playstore")}</span>
+                                <span className="span_1 corebox_0 start items_center">{title}</span>
+                                <span className="f_0">{((stacks == "Adobe XD") ? "Adobe xd" : "Google Playstore")}</span>
                             </div>
                         </a>
                         <a href={link} className="row row_50 row_1a">
@@ -196,16 +196,16 @@ export default function Mobile_display() {
 
                         </a>
                     </div>
-                    <div className={"mobile_app_jpg mobile pic_" + space_3}></div>
+                    <div className={"mobile_app_jpg backsize_17 mbacksize_15 mobile pic_" + space_3}></div>
                 </div>
             </CSSTransition>
 
-            <div className="progress row row_50">
+            {/* <div className="progress row row_50">
                 <div className= {(3 - (pics - space_2)  == 0) ? 'active' : '' }/>
                 <div className= {(3 - (pics - space_2)  == 1) ? 'active' : '' }/>
                 <div className= {(3 - (pics - space_2)  == 2) ? 'active' : '' }/>
                 <div className= {(3 - (pics - space_2)  == 3) ? 'active' : '' }/>
-            </div>
+            </div> */}
 
         </div>
     )
