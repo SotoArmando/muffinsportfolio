@@ -27,6 +27,7 @@ import Nav from './containers/nav';
 import { set } from 'lodash-es';
 import Mobile_dash from './components/mobile_dash';
 import Web_dash_portraitmobile from './components/web_dash_portraitmobile';
+import Projectfile from './containers/projectfile';
 
 
 export default function App() {
@@ -46,7 +47,7 @@ export default function App() {
         <CSSTransition in={true} classNames="clean" key={location.key} timeout={357}>
           <Switch location={location}>
             <Route path="/web/:page" >{(iOS()) ? <Web_dash_portraitmobile /> :<Web_dash />}</Route>
-            <Route path="/mobile/:page" ><Mobile_dash /></Route>
+            <Route path="/projectfile/:project" ><Projectfile/></Route>
             <Route path="/" ><Home_dash /></Route>
           </Switch>
         </CSSTransition>
