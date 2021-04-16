@@ -111,7 +111,7 @@
         }
 
         .boxshadow_#{$i} {
-            box-shadow: 4px 4px 1rem * core($i) #eeeeee;
+            box-shadow: 0px 0px 1rem * core($i) rgba(0,0,0,.24);
         }
         .borderradius_#{$i} {
             border-radius: 3.6rem * core($i);

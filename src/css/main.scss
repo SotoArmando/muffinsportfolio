@@ -56,6 +56,10 @@ $core: 1;
 .border_02 {
     border-top: 3px solid rgba(250, 250, 250, 0.84);
 }
+.transition_a0 {
+    transition: background 200ms;
+    transition-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
+}
 .col.col_2 {
     // background-color: rgb(50, 50, 50);
 
@@ -1175,14 +1179,14 @@ input::placeholder {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    text-align: center;
+ 
     color: rgb(250, 250, 250);
     z-index: 20;
     height: 100vh;
 
     span {
         align-self: center;
-        justify-content: center;
+        justify-content: start;
         align-items: center;
         display: flex;
         min-height: 1rem * fontsize(3);
