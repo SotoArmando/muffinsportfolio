@@ -54,13 +54,13 @@ export default function Home_dash(props) {
             <div className="col allsize">
                 <span className=" f800 fore_11 row start items_center corebox_5  ls_27 lh_2 ffam_0 f_3 ">Some Work</span>
                 <div className="row wrap basis_44 corebox_12 start items_center mar_b23 nmar_l20 nmar_r20 ">
-                    <Projectl isLast={true} name={"Muffinsmastermind"} pic="pic_mastermind_0"  tags={["HTML/CSS","REACT","ES6"]}/>
-                    <Projectl isFirst={true} name={"Sotoarmandobrainspace"} pic="pic_e" tags={["HTML/CSS","REACT","ES6"]} />
+                    <Projectl isLast={true} name={"Muffinsmastermind"} pic="pic_mastermind_0" tags={["HTML/CSS", "REACT", "ES6"]} />
+                    <Projectl isFirst={true} name={"Sotoarmandobrainspace"} pic="pic_e" tags={["HTML/CSS", "REACT", "ES6"]} />
                 </div>
                 <div className="row wrap basis_44 corebox_12 start items_center nmar_l20 nmar_r20 ">
-                    <Projectm isFirst={true} name={"Brilliant"} pic="pic_brilliant_0" tags={["UNITY","C#"]} />
-                    <Projectm name={"Codicookingtimer"}  pic="pic_codi_0" tags={["PYTHON","KIVY"]} />
-                    <Projectm isLast={true} name={"Budgetboy"} tags={["ANDROID","JAVA"]} pic="pic_budget_0"/>
+                    <Projectm isFirst={true} name={"Brilliant"} pic="pic_brilliant_0" tags={["UNITY", "C#"]} />
+                    <Projectm name={"Codicookingtimer"} pic="pic_codi_0" tags={["PYTHON", "KIVY"]} />
+                    <Projectm isLast={true} name={"Budgetboy"} tags={["ANDROID", "JAVA"]} pic="pic_budget_0" />
                 </div>
             </div>
         </div>
@@ -81,7 +81,7 @@ export default function Home_dash(props) {
 
             </div>
             <div className="row center">
-                <img className="maxedcorebox_x5"  src={"https://d92mrp7hetgfk.cloudfront.net/images/sites/misc/SmallerMicroverselogo_revised/original.jpg?1581442029"} />
+                <img className="maxedcorebox_x5" src={"https://d92mrp7hetgfk.cloudfront.net/images/sites/misc/SmallerMicroverselogo_revised/original.jpg?1581442029"} />
             </div>
         </div>
 
@@ -90,40 +90,43 @@ export default function Home_dash(props) {
                 <span className=" f800 fore_11 row start items_center corebox_5  ls_27 lh_2 ffam_0 f_3 ">Publications</span>
 
                 <div className="row wrap basis_44 corebox_12 start items_center nmar_l20 nmar_r20 ">
-                    <Projectm isFirst={true} name={"Career Karma Projects Spotlight: June 26th"} pic="pic_careerkarma_0" tags={["",""]} />
-                    <Projectm isLast={true} name={"HACKATHON Liderazgo Responsable"} tags={["",""]} pic="pic_liderazgo_0"/>
+                    <Projectm isFirst={true} name={"Career Karma Projects Spotlight: June 26th"} pic="pic_careerkarma_0" tags={["", ""]} />
+                    <Projectm isLast={true} name={"HACKATHON Liderazgo Responsable"} tags={["", ""]} pic="pic_liderazgo_0" />
                     {/* <Projectm name={"CAFAM Science Fair 2019"}  pic="pic_cafam_0" tags={["",""]} /> */}
                 </div>
             </div>
         </div>
-        <div className="Contact_me1 row center corebox_18 mobilecorebox_18 mobilepad_l27 mobilepad_r27">
+        <div className="Contact_me1 row center corebox_18 mobilecorebox_18 mobilepad_l27 mobilepad_r27 back_2b">
             <div className="col">
-                <span className=" corebox_1  row center f_3 fore_green f700 ffam_0 fore_19">Interested in collaborating?</span>
-                <span className="maxedcorebox_x18 fore_13 f600 ffam_0 corebox_8  mobilecorebox_8 row center f_0 lh_2">If you have an application you are interested in developing, a feature that you need built or a project that need coding, I’d love to help you with it.</span>
+                <span className=" corebox_1  row center f_4 fore_green f700 ffam_0 fore_19">Interested in collaborating?</span>
+                <span className="maxedcorebox_x19 ls_28 fore_13 f500 ffam_0 corebox_9  mobilecorebox_8 row center f_0 lh_2">If you have an application you are interested in developing, a feature that you need built or a project that need coding, I’d love to help you with it.</span>
                 <div className="col center">
-                    <div className="row basis_42 allsize"> 
+                    <div className="row basis_42 allsize">
                         <input placeholder="Name" className="corebox_3 mobilemar_b24 pad_l27 pad_t27 back_3 pad_b26" />
                         <input placeholder="Mail" className="corebox_3 mobilemar_b24 pad_l27 pad_t27 back_3 pad_b26" />
                     </div>
 
                     <textarea placeholder="Message" className="corebox_5 back_3 mobilemar_b24 mar_t24  mobilemar_t0 pad_l27 pad_t27" />
-                    <div className="corebox_9 col center">
+                    <div className="corebox_9 col center border_t0">
                         <form id="mail" method="post" action="mailto:dev.armando29@gmail.com?subject=Contact&amp;message=">
-                            <input className="special_btn_0 corebox_x10" type="submit" value="Send"  />
+                            <input className="special_btn_0 corebox_x10" type="submit" value="Send" />
                         </form>
                     </div>
 
                 </div>
-                <div className="row row_0 corebox_2">
-                    <span>Armando Soto</span>
-                    <a href="https://www.linkedin.com/in/asotomelo/" className="svg linkedin" />
-                    <a href="https://github.com/SotoArmando" className="svg github" />
-                    <a href="https://twitter.com/sotoarmando029" className="svg twitter" />
-                    <a href="https://stackoverflow.com/users/5007444/sotoarmando" className="svg stack-overflow" />
-                </div>
 
-                <span className="bottom_title">© 2020  Sotoarmando</span>
             </div>
+        </div>
+        <div className="col Contact_me1">
+            <div className="row row_0 corebox_4 border_b0">
+                <span>Armandosoto@sotoarmando.com</span>
+                <a href="https://www.linkedin.com/in/asotomelo/" className="svg linkedin" />
+                <a href="https://github.com/SotoArmando" className="svg github" />
+                <a href="https://twitter.com/sotoarmando029" className="svg twitter" />
+                <a href="https://stackoverflow.com/users/5007444/sotoarmando" className="svg stack-overflow" />
+            </div>
+
+            <span className="bottom_title">© 2020  Armando Soto</span>
         </div>
 
     </div>
