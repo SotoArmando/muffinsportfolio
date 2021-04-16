@@ -306,6 +306,29 @@
         width: body_width(1, $bodywidth);
         max-width: body_width(1, $bodywidth);
     }
+
+    .disable_opasity:not(.no_disable) {
+        opacity: 0;
+        transform: translateY(3.6rem);
+        transition:  opacity 357ms, transform 357ms;
+        will-change: opacity, transform;
+
+    }
+    
+    .mobile_app-enter-done .disable_opasity:not(.no_disable).enable,
+    .mobile_app-exit-done .disable_opasity:not(.no_disable).enable,
+    .mobile_app-appear-done .disable_opasity:not(.no_disable).enable,
+    .mobile_app-enter-done .disable_opasity:not(.no_disable).enable,
+
+    .mobile_app_detail-exit-done .disable_opasity:not(.no_disable).enable,
+    .mobile_app_detail-enter-done .disable_opasity:not(.no_disable).enable
+    .mobile_app_detail-appear-done .disable_opasity:not(.no_disable).enable,
+    .mobile_app_detail-enter-done .disable_opasity:not(.no_disable).enable { 
+        transition-delay: 357ms;
+        opacity: 1;
+        transform: translateY(0);
+    } 
+    
     body {
         width: body_width(1, $bodywidth);
         margin: auto;
