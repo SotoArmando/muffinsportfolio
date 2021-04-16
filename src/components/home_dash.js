@@ -20,35 +20,37 @@ export default function Home_dash(props) {
     })
 
     return <div className="col back_2">
-        <div className="row basis_44 corebox_18 ">
-            <div className="col pad_33 center items_start mobilepad_l24">
-                <div className="col start items_center">
-                    {/* <div className="nice_circle_0" ></div> */}
-                    <div className="col  f_4 m_f_3 f700 ls_27 lh_2 corebox_9 row center maxedcorebox_x15">
-                        <span className="col ffam_0">
-                            <span className=" fore_11">Hey There. I'm Armando.</span>
-                            <span className=" color_1 ">I'm Full-Stack Developer student at Microverse</span>
-                            {/* <span className="none_unless_1024">Mobile app developer hobbyist</span> */}
-                            {/* <span className="none_unless_1024">Ambitious product designer of it own ideas</span> */}
+        <div className="corebox_19 row center">
+            <div className="row basis_44 corebox_18 border_t0 border_b0 boxshadow_27 ">
+                <div className="col pad_33 center items_start mobilepad_l24">
+                    <div className="col start items_center">
+                        {/* <div className="nice_circle_0" ></div> */}
+                        <div className="col  f_4 m_f_3 f700 ls_27 lh_2 corebox_9 row center maxedcorebox_x15">
+                            <span className="col ffam_0">
+                                <span className=" fore_11">Hey There. I'm Armando.</span>
+                                <span className=" color_1 ">I'm Full-Stack Developer student at Microverse</span>
+                                {/* <span className="none_unless_1024">Mobile app developer hobbyist</span> */}
+                                {/* <span className="none_unless_1024">Ambitious product designer of it own ideas</span> */}
+                            </span>
+                        </div>
+                        <span className="f400 f_1 fore_14 ls_28 lh_3 row center corebox_9 maxedcorebox_x15">
+                            <span>
+                                Hi, I'm Armando, a developer living at <span className="span_3">Santo Domingo</span>.  <span className="span_3">Currently open for job opportunities</span>. I enjoy building mobile apps and games. Look over some of my work! If you have anything precious to code don't hesitate letting me know.
                         </span>
-                    </div>
-                    <span className="f400 f_1 fore_14 ls_28 lh_3 row center corebox_9 maxedcorebox_x15">
-                        <span>
-                            Hi, I'm Armando, a developer living at <span className="span_3">Santo Domingo</span>.  <span className="span_3">Currently open for job opportunities</span>. I enjoy building mobile apps and games. Look over some of my work! If you have anything precious to code don't hesitate letting me know.
                         </span>
-                    </span>
-                    <div className="row start items_center corebox_5 ">
-                        <a href="https://www.linkedin.com/in/asotomelo/" className="svg linkedin mar_r25" />
-                        <a href="https://github.com/SotoArmando" className="svg github corebox_x3" />
-                        <a href="https://twitter.com/sotoarmando029" className="svg twitter corebox_x3" />
-                        <a href="https://stackoverflow.com/users/5007444/sotoarmando" className="svg stack-overflow corebox_x3" />
+                        <div className="row start items_center corebox_5 ">
+                            <a href="https://www.linkedin.com/in/asotomelo/" className="svg linkedin mar_r25" />
+                            <a href="https://github.com/SotoArmando" className="svg github corebox_x3" />
+                            <a href="https://twitter.com/sotoarmando029" className="svg twitter corebox_x3" />
+                            <a href="https://stackoverflow.com/users/5007444/sotoarmando" className="svg stack-overflow corebox_x3" />
+                        </div>
+                        {/* <Sendmail /> */}
                     </div>
-                    {/* <Sendmail /> */}
-                </div>
 
+                </div >
+                <Mobile_display />
             </div >
-            <Mobile_display />
-        </div >
+        </div>
 
         <div className="corebox_19 col pad_l33 pad_r33 mobilepad_l24 mobilepad_r21 border_01 center items_center border_02 overflowhidden">
             <div className="col allsize">
