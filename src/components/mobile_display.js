@@ -111,7 +111,7 @@ export default function Mobile_display() {
     useEffect(() => {
         setTimeout(() => handleNextParent(), 1000 * 6)
     
-        for (const property in (isVertical) ? {0: false, 1: false} : {2: false, 3: false}) {
+        for (const property in backgroundloaded) {
             let reference = [ref_0, ref_1, ref_2, ref_3][property]
             const length = window.getComputedStyle(reference.current).backgroundImage.length
             const url = window.getComputedStyle(reference.current).backgroundImage.toString().substring(5, length - 2)
