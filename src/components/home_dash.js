@@ -20,7 +20,8 @@ export default function Home_dash(props) {
     })
 
     return <div className="col back_2">
-        <div className="corebox_19 row center">
+        <div className="corebox_5"></div>
+        <div className="corebox_19 row center border_02">
             <div className="row basis_44 corebox_18 border_t0 border_b0 boxshadow_27 ">
                 <div className="col pad_33 center items_start mobilepad_l24">
                     <div className="col start items_center">
