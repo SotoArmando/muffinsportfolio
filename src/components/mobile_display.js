@@ -18,7 +18,7 @@ const apps = [
         link: "https://play.google.com/store/apps/details?id=com.armando.Brilliant"
     },
     {
-        title: "Codi Cooking Timer",
+        title: "Cooking Timer",
         desc: "<b>Codi Cooking Timer</b> Is an cooking assitant, a place to save recipes and have a quick stepthrought cooking feature.",
         platform: "Android",
         src: "./pic/mobile/codicook.webp",
@@ -142,11 +142,11 @@ export default function Mobile_display() {
             >
                 <div className="viewp">
                     <div className="header f_1 pad_17">
-                        <a href={b.link} className="row row_50 row_1 pad_l23 pad_r33 corebox_6 items_center widthunset">
-                            <span className={"corebox_x2 svg " + ((b.stacks == "Adobe XD") ? "adobexd" : "googleplay")}></span>
+                        <a href={b.link} className="row row_50 row_1 pad_23 corebox_x13 corebox_6 items_center widthunset">
+                            <span className={"corebox_x6 svg " + ((b.stacks == "Adobe XD") ? "adobexd" : "googleplay")}></span>
                             <div className="col">
-                                <span className="span_1 corebox_0 start items_center">{b.title}</span>
-                                <span className="f_0">{((b.stacks == "Adobe XD") ? "Adobe xd" : "Google Playstore")}</span>
+                                <span className="span_1 corebox_0 start items_center maxedcorebox_x10 wrap f_1 lh_1">{b.title}</span>
+                                <span className="f_0 row items_center corebox_1 ">{((b.stacks == "Adobe XD") ? "Adobe xd" : "Google Playstore")}</span>
                             </div>
                         </a>
                         <a href={link} className="row row_50 row_1a">
@@ -164,11 +164,11 @@ export default function Mobile_display() {
             >
                 <div className="viewp ">
                     <div className="header f_1 pad_17 ">
-                        <a href={link} className="row row_50 row_1 pad_l23 pad_r33 corebox_6 items_center widthunset">
-                            <span className={"corebox_x2 svg " + ((stacks == "Adobe XD") ? "adobexd" : "googleplay")}></span>
+                        <a href={link} className="row row_50 row_1 pad_23 corebox_x13 corebox_6 items_center widthunset">
+                            <span className={"corebox_x6 svg " + ((stacks == "Adobe XD") ? "adobexd" : "googleplay")}></span>
                             <div className="col">
-                                <span className="span_1 corebox_0 start items_center">{title}</span>
-                                <span className="f_0">{((stacks == "Adobe XD") ? "Adobe xd" : "Google Playstore")}</span>
+                                <span className="span_1 corebox_0 start items_center maxedcorebox_x10 wrap f_1 lh_1">{title}</span>
+                                <span className="f_0 row items_center corebox_1 ">{((stacks == "Adobe XD") ? "Adobe xd" : "Google Playstore")}</span>
                             </div>
                         </a>
                         <a href={link} className="row row_50 row_1a">
@@ -188,11 +188,11 @@ export default function Mobile_display() {
             >
                 <div className="viewp">
                     <div className="header f_1 pad_17">
-                        <a href={link} className="row row_50 row_1 pad_l23 pad_r33  corebox_6 items_center widthunset">
-                            <span className={"corebox_x2 svg " + ((stacks == "Adobe XD") ? "adobexd" : "googleplay")}></span>
+                        <a href={link} className="row row_50 row_1 pad_23 corebox_x13 corebox_6 items_center widthunset">
+                            <span className={"corebox_x6 svg " + ((stacks == "Adobe XD") ? "adobexd" : "googleplay")}></span>
                             <div className="col">
-                                <span className="span_1 corebox_0 start items_center">{title}</span>
-                                <span className="f_0">{((stacks == "Adobe XD") ? "Adobe xd" : "Google Playstore")}</span>
+                                <span className="span_1 corebox_0 start items_center maxedcorebox_x10 wrap f_1 lh_1">{title}</span>
+                                <span className="f_0 row items_center corebox_1 ">{((stacks == "Adobe XD") ? "Adobe xd" : "Google Playstore")}</span>
                             </div>
                         </a>
                         <a href={link} className="row row_50 row_1a">
@@ -211,11 +211,11 @@ export default function Mobile_display() {
             >
                 <div className="viewp">
                     <div className="header f_1 pad_17">
-                        <a href={link} className="row row_50 row_1 pad_l23 pad_r33  corebox_6 items_center widthunset">
-                            <span className={"corebox_x2 svg " + ((stacks == "Adobe XD") ? "adobexd" : "googleplay")}></span>
+                        <a href={link} className="row row_50 row_1 pad_23  corebox_x13 corebox_6 items_center widthunset">
+                            <span className={"corebox_x6 svg " + ((stacks == "Adobe XD") ? "adobexd" : "googleplay")}></span>
                             <div className="col">
-                                <span className="span_1 corebox_0 start items_center">{title}</span>
-                                <span className="f_0">{((stacks == "Adobe XD") ? "Adobe xd" : "Google Playstore")}</span>
+                                <span className="span_1 corebox_0 start items_center maxedcorebox_x10 wrap f_1 lh_1">{title}</span>
+                                <span className="f_0 row items_center corebox_1 ">{((stacks == "Adobe XD") ? "Adobe xd" : "Google Playstore")}</span>
                             </div>
                         </a>
                         <a href={link} className="row row_50 row_1a">
