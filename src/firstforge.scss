@@ -293,6 +293,8 @@
 
     .wrap {
         flex-wrap: wrap;
+        overflow-wrap: normal;
+        white-space: pre-wrap;
     }
 
     .tcenter {
