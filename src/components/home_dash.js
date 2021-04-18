@@ -15,18 +15,21 @@ export default function Home_dash({progress, setProgress}) {
         return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
     }
     const progressMap = (() => {
-      
-        if (sections[0].current) {
+        try {
+            if (sections[0].current) {
            
-            for (let i = 0; i < 5; i++) {
-                const { height, y } = sections[i].current.getBoundingClientRect()
-
-                if ((((height - (convertRemToPixels(3.6) * 2.36139202117919921875 )) * 0.75) + y) > 0) {
-                    setProgress(i)
-                    return i
-                };
+                for (let i = 0; i < 5; i++) {
+                    const { height, y } = sections[i].current.getBoundingClientRect()
+    
+                    if ((((height - (convertRemToPixels(3.6) * 2.36139202117919921875 )) * 0.75) + y) > 0) {
+                        setProgress(i)
+                        return i
+                    };
+                }
             }
-        }
+        } catch (Error)
+        {}
+        
     }).bind(sections)
 
 
