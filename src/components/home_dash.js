@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Mobile_display from './mobile_display';
 import img_0 from '../res/svg/email.svg'
 import Sendmail from '../containers/sendmail';
@@ -6,10 +6,37 @@ import Projectl from '../containers/projectl';
 import Projectm from '../containers/projectm';
 
 
-export default function Home_dash(props) {
+export default function Home_dash({progress, setProgress}) {
     let [load, setload] = useState(false);
+    let sections = { 0: useRef(), 1: useRef(), 2: useRef(), 3: useRef(), 4: useRef() }
+
+    
+    function convertRemToPixels(rem) {    
+        return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
+    }
+    const progressMap = (() => {
+      
+        if (sections[0].current) {
+           
+            for (let i = 0; i < 5; i++) {
+                const { height, y } = sections[i].current.getBoundingClientRect()
+
+                if ((((height - (convertRemToPixels(3.6) * 2.36139202117919921875 )) * 0.75) + y) > 0) {
+                    setProgress(i)
+                    return i
+                };
+            }
+        }
+    }).bind(sections)
+
+
 
     useEffect(() => {
+        document.addEventListener("scroll", () => progressMap());
+   
+   
+        console.log(progress);
+    
         if (!load) {
             // document.querySelector('body').style.margin = '';
             // document.querySelector('body').style.width = '';
@@ -17,12 +44,21 @@ export default function Home_dash(props) {
             // document.querySelector('#root').style.backgroundColor = ''
             setload(true);
         }
-    })
+        return () => {
+            document.removeEventListener("scroll", () => progressMap());
+        };
+    }, [])
 
-    return <div className="col back_2">
-        <div className="corebox_5"></div>
-        <div className="corebox_19 row center border_02">
-            <div className="row basis_44 corebox_18 border_t0 border_b0 boxshadow_27 ">
+    return <div className="col back_2" id="home_dash">
+        <div className="corebox_5 row end items_center ls_30 ffam_1 f_1 f800  fore_11">
+            <div className="row center maxedcorebox_x18 wrap ">
+                {
+                    ["Home", "Projects", "About", "Contact"].map((e, i) => <div onClick={() => sections[i].current.scrollIntoView() } className={"transition_0 corebox_x6 maxedcorebox_x6 row center btn_u " + (progress == i ? "fore_20" : "")}>{e}</div>)
+                }
+            </div>
+        </div>
+        <div ref={sections[0]} id="section_0" className="corebox_20 row center border_02 back_2c">
+            <div className="row basis_44 corebox_18 border_t0 border_b0 boxshadow_27 back_2 ">
                 <div className="col pad_33 center items_start mobilepad_l24">
                     <div className="col start items_center">
                         {/* <div className="nice_circle_0" ></div> */}
@@ -52,10 +88,9 @@ export default function Home_dash(props) {
                 <Mobile_display />
             </div >
         </div>
-
-        <div className="corebox_19 col pad_l33 pad_r33 mobilepad_l24 mobilepad_r21 border_01 center items_center border_02 overflowhidden">
+        <div ref={sections[1]} id="section_1" className="corebox_19 col pad_l33 pad_r33 mobilepad_l24 mobilepad_r21 border_01 center items_center border_02 overflowhidden">
             <div className="col allsize">
-                <span className=" f800 fore_11 row start items_center corebox_5  ls_27 lh_2 ffam_0 f_3 ">Some Work</span>
+                <span className=" f800 fore_11 row start items_center corebox_5  ls_27 lh_2 ffam_0 f_3 ">Some Learning Experiences</span>
                 <div className="row wrap basis_44 corebox_12 start items_center mar_b23 nmar_l20 nmar_r20 ">
                     <Projectl isLast={true} name={"Muffinsmastermind"} pic="pic_mastermind_0" tags={["HTML/CSS", "REACT", "ES6"]} />
                     <Projectl isFirst={true} name={"Sotoarmandobrainspace"} pic="pic_e" tags={["HTML/CSS", "REACT", "ES6"]} />
@@ -67,7 +102,7 @@ export default function Home_dash(props) {
                 </div>
             </div>
         </div>
-        <div className="corebox_15 row pad_l33 pad_r33 mobilepad_l27 mobilepad_r21 border_01 center items_center border_02 overflowhidden basis_45 center" >
+        <div ref={sections[2]} id="section_2" className="corebox_15 row pad_l33 pad_r33 mobilepad_l27 mobilepad_r21 border_01 center items_center border_02 overflowhidden basis_45 center" >
             <div className="col allsize">
                 <span className=" f800 fore_11 row start items_center corebox_5  ls_27 lh_2 ffam_0 f_3 ">About Me</span>
                 <div className="row wrap basis_46  start items_center    ">
@@ -87,10 +122,9 @@ export default function Home_dash(props) {
                 <img className="maxedcorebox_x5" src={"https://d92mrp7hetgfk.cloudfront.net/images/sites/misc/SmallerMicroverselogo_revised/original.jpg?1581442029"} />
             </div>
         </div>
-
-        <div className="corebox_15 col pad_l33 pad_r33 mobilepad_l24 mobilepad_r21 border_01 center items_center border_02 overflowhidden">
+        <div ref={sections[3]} id="section_3" className="corebox_15 col pad_l33 pad_r33 mobilepad_l24 mobilepad_r21 border_01 center items_center border_02 overflowhidden">
             <div className="col allsize">
-                <span className=" f800 fore_11 row start items_center corebox_5  ls_27 lh_2 ffam_0 f_3 ">Publications</span>
+                <span className=" f800 fore_11 row start items_center corebox_5  ls_27 lh_2 ffam_0 f_3 ">More Learning Experiences</span>
 
                 <div className="row wrap basis_44 corebox_12 start items_center nmar_l20 nmar_r20 ">
                     <Projectm isFirst={true} name={"Career Karma Projects Spotlight: June 26th"} pic="pic_careerkarma_0" tags={["", ""]} />
@@ -99,7 +133,7 @@ export default function Home_dash(props) {
                 </div>
             </div>
         </div>
-        <div className="Contact_me1 row center corebox_18 mobilecorebox_18 mobilepad_l27 mobilepad_r27 back_2b">
+        <div ref={sections[4]} id="section_4" className="Contact_me1 row center corebox_18 mobilecorebox_18 mobilepad_l27 mobilepad_r27 back_2b">
             <div className="col">
                 <span className=" corebox_1  row center f_4 fore_green f700 ffam_0 fore_19">Interested in collaborating?</span>
                 <span className="maxedcorebox_x19 ls_28 fore_13 f500 ffam_0 corebox_9  mobilecorebox_8 row center f_0 lh_2">If you have an application you are interested in developing, a feature that you need built or a project that need coding, I’d love to help you with it.</span>
@@ -120,6 +154,7 @@ export default function Home_dash(props) {
 
             </div>
         </div>
+
         <div className="col Contact_me1">
             <div className="row row_0 corebox_4 border_b0">
                 <span>Armandosoto@sotoarmando.com</span>
