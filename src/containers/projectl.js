@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 export default function Projectl({ isFirst, isLast, name, pic, tags }) {
-    const cname = "allsize back_red corebox_13 col items_start start f700 pad_l24 pad_r24  f_1  ffam_0  secbacksize_13 msecbacksize_11 " + pic
+    const cname = "allsize back_red corebox_15 col items_start start f700 pad_l24 pad_r24  f_1  ffam_0  secbacksize_14 msecbacksize_11 " + pic
     let classname = "corebox_13  tcenter row center  relative pad_l20 pad_r20   mobilepad_t24 btn hover relative btn"
     return <span className={classname}>
         <div className="back_3 corebox_13">
@@ -12,7 +12,7 @@ export default function Projectl({ isFirst, isLast, name, pic, tags }) {
         
         <div className="to_hover absolute  allsize  fore_9 f600 pad_r20  pad_l20 mobilepad_t24 ">
             <div className="f_0  allsize col end items_center back_22" >
-                <div className="maxedcorebox_0 back_21 row start items_center pad_l20 pad_r20 ">
+                <div className="maxedcorebox_0 back_24 row end items_center pad_l20 pad_r20 ">
                     {tags.map(e => <span className="pad_l20 pad_r20  mar_l16 mar_r16  center widthunset  ">{e}</span>)}
                 </div>
 
