@@ -2,21 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
 
-const they = "codicook brilliant budgetboy".split(" ");
+const they = "brilliant codicook  budgetboy".split(" ");
 
 const apps = [
-    {
-        title: "Cooking Timer",
-        desc: "<b>Codi Cooking Timer</b> Is an cooking assitant, a place to save recipes and have a quick stepthrought cooking feature.",
-        platform: "Android",
-        src: "./pic/mobile/codicook.webp",
-        stacks: "Python, Kivy",
-        pics: 7,
-        livelink: "https://play.google.com/store/apps/details?id=cc.test.codi",
-        class: "mobile1",
-        isgame: false,
-        link: "https://play.google.com/store/apps/details?id=cc.test.codi"
-    },
     {
         title: "Brilliant Escape",
         desc: "<b>Brilliant Escape</b> is a 2D Arcade game made by Javedots Games where player *you must never let the bouncing square hit you otherwise you lose.",
@@ -29,7 +17,18 @@ const apps = [
         isgame: true,
         link: "https://play.google.com/store/apps/details?id=com.armando.Brilliant"
     },
-    
+    {
+        title: "Cooking Timer",
+        desc: "<b>Codi Cooking Timer</b> Is an cooking assitant, a place to save recipes and have a quick stepthrought cooking feature.",
+        platform: "Android",
+        src: "./pic/mobile/codicook.webp",
+        stacks: "Python, Kivy",
+        pics: 7,
+        livelink: "https://play.google.com/store/apps/details?id=cc.test.codi",
+        class: "mobile1",
+        isgame: false,
+        link: "https://play.google.com/store/apps/details?id=cc.test.codi"
+    },
     {
         title: "Budgetboy Lite",
         desc: "<b>Budgetboy</b> is An Easy way to manage a occational budget for quick, also you will find more functions with will help u get more sophisticated use of it.",
