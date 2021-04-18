@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
 
-const they = "brilliant codicook budgetboy".split(" ");
+const they = "codicook brilliant budgetboy".split(" ");
 
 const apps = [
     {
