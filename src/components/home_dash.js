@@ -139,7 +139,7 @@ export default function Home_dash({progress, setProgress}) {
         <div ref={sections[4]} id="section_4" className="Contact_me1 row center corebox_18 mobilecorebox_18 mobilepad_l27 mobilepad_r27 back_2b">
             <div className="col">
                 <span className=" corebox_1  row center f_4 fore_green f700 ffam_0 fore_19">Interested in collaborating?</span>
-                <span className="maxedcorebox_x19 ls_28 fore_13 f500 ffam_0 corebox_9  mobilecorebox_8 row center f_0 lh_2">If you have an application you are interested in developing, a feature that you need built or a project that need coding, I’d love to help you with it.</span>
+                <span className="maxedcorebox_x19 ls_28 fore_13 f500 ffam_0 corebox_6  mobilecorebox_8 row center f_0 lh_2">If you have an application you are interested in developing, a feature that you need built or a project that need coding, I’d love to help you with it.</span>
                 <div className="col center">
                     <div className="row basis_42 allsize">
                         <input placeholder="Name" className="corebox_3 mobilemar_b24 pad_l27 pad_t27 back_3 pad_b26" />
