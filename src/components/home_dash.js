@@ -129,8 +129,8 @@ export default function Home_dash({ progress, setProgress }) {
                 <span className=" f800 fore_11 row start items_center corebox_5  ls_27 lh_2 ffam_0 f_3 ">More Learning Experiences</span>
 
                 <div className="row wrap basis_44 corebox_12 start items_center nmar_l20 nmar_r20 ">
-                    <Projectm isFirst={true} name={"Career Karma Projects Spotlight: June 26th"} pic="pic_careerkarma_0" tags={["", ""]} />
-                    <Projectm isLast={true} name={"HACKATHON Liderazgo Responsable"} tags={["", ""]} pic="pic_liderazgo_0" />
+                    <Projectl isFirst={true} name={"Career Karma Projects Spotlight: June 26th"} pic="pic_careerkarma_0" tags={["", ""]} />
+                    <Projectl isLast={true} name={"HACKATHON Liderazgo Responsable"} tags={["", ""]} pic="pic_liderazgo_0" />
                     {/* <Projectm name={"CAFAM Science Fair 2019"}  pic="pic_cafam_0" tags={["",""]} /> */}
                 </div>
             </div>
