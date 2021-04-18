@@ -6,18 +6,6 @@ const they = "brilliant codicook budgetboy".split(" ");
 
 const apps = [
     {
-        title: "Brilliant Escape",
-        desc: "<b>Brilliant Escape</b> is a 2D Arcade game made by Javedots Games where player *you must never let the bouncing square hit you otherwise you lose.",
-        platform: "Android",
-        src: "./pic/mobile/brilliant.webp",
-        class: "mobile3",
-        pics: 4,
-        livelink: "https://play.google.com/store/apps/details?id=com.armando.Brilliant",
-        stacks: "Unity, C#, Google Admob",
-        isgame: true,
-        link: "https://play.google.com/store/apps/details?id=com.armando.Brilliant"
-    },
-    {
         title: "Cooking Timer",
         desc: "<b>Codi Cooking Timer</b> Is an cooking assitant, a place to save recipes and have a quick stepthrought cooking feature.",
         platform: "Android",
@@ -29,6 +17,19 @@ const apps = [
         isgame: false,
         link: "https://play.google.com/store/apps/details?id=cc.test.codi"
     },
+    {
+        title: "Brilliant Escape",
+        desc: "<b>Brilliant Escape</b> is a 2D Arcade game made by Javedots Games where player *you must never let the bouncing square hit you otherwise you lose.",
+        platform: "Android",
+        src: "./pic/mobile/brilliant.webp",
+        class: "mobile3",
+        pics: 4,
+        livelink: "https://play.google.com/store/apps/details?id=com.armando.Brilliant",
+        stacks: "Unity, C#, Google Admob",
+        isgame: true,
+        link: "https://play.google.com/store/apps/details?id=com.armando.Brilliant"
+    },
+    
     {
         title: "Budgetboy Lite",
         desc: "<b>Budgetboy</b> is An Easy way to manage a occational budget for quick, also you will find more functions with will help u get more sophisticated use of it.",
@@ -67,8 +68,8 @@ export default function Mobile_display() {
     const ref_2 = useRef();
     const ref_3 = useRef();
 
-    const [isVertical, setisVertical] = useState(true);
     const [imgs ,setImgs] = useState({0: new Image(), 1: new Image(), 2: new Image(), 3: new Image()})
+    
     const handleNextParent = () => {
         const cond = space_2 >= apps[space_0].pics;
         [ref_0, ref_1, ref_2, ref_3].forEach(e => e.current.classList.remove("enable"))
@@ -86,11 +87,11 @@ export default function Mobile_display() {
                 backgroundloaded: { ...backgroundloaded, 0: false, 1: false },
             })
 
-            setisVertical(true);
+
 
         } else {
             handleNextChild();
-            setisVertical(false);
+    
         }
 
     }
