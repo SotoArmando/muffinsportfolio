@@ -6,40 +6,39 @@ import Projectl from '../containers/projectl';
 import Projectm from '../containers/projectm';
 
 
-export default function Home_dash({progress, setProgress}) {
+export default function Home_dash({ progress, setProgress }) {
     let [load, setload] = useState(false);
     let sections = { 0: useRef(), 1: useRef(), 2: useRef(), 3: useRef(), 4: useRef() }
 
-    
-    function convertRemToPixels(rem) {    
+
+    function convertRemToPixels(rem) {
         return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
     }
     const progressMap = (() => {
         try {
             if (sections[0].current) {
-           
+
                 for (let i = 0; i < 5; i++) {
                     const { height, y } = sections[i].current.getBoundingClientRect()
-    
-                    if ((((height - (convertRemToPixels(3.6) * 2.36139202117919921875 )) * 0.75) + y) > 0) {
+
+                    if ((((height - (convertRemToPixels(3.6) * 2.36139202117919921875)) * 0.75) + y) > 0) {
                         setProgress(i)
                         return i
                     };
                 }
             }
-        } catch (Error)
-        {}
-        
+        } catch (Error) { }
+
     }).bind(sections)
 
 
 
     useEffect(() => {
         document.addEventListener("scroll", () => progressMap());
-   
-   
+
+
         console.log(progress);
-    
+
         if (!load) {
             // document.querySelector('body').style.margin = '';
             // document.querySelector('body').style.width = '';
@@ -56,12 +55,12 @@ export default function Home_dash({progress, setProgress}) {
         <div className="corebox_5 row end items_center ls_30 ffam_1 f_1 f800  fore_14 ">
             <div className="row center maxedcorebox_x18 wrap ">
                 {
-                    ["Home", "Projects", "About", "Contact"].map((e, i) => <div onClick={() => sections[i].current.scrollIntoView() } className={"transition_0 corebox_x6 maxedcorebox_x6 row center btn_u " + (progress == i ? "fore_20" : "")}>{e}</div>)
+                    ["Home", "Projects", "About", "Experiences", "Contact"].map((e, i) => <div onClick={() => document.querySelector(["#section_" + i]).scrollIntoView()} className={"transition_0 corebox_x" + [6, 6, 6, 8, 7][i] + " maxedcorebox_x" + [6, 6, 6, 8, 7][i] + " row center btn_u " + (progress == i ? "fore_20" : "")}>{e}</div>)
                 }
             </div>
         </div>
         <div ref={sections[0]} id="section_0" className="corebox_20 row center border_02 back_2c">
-            <div className="row basis_44 corebox_18 border_t0 border_b0 boxshadow_27 back_2 ">
+            <div className="row basis_44 corebox_18 border_t0 border_b0 boxshadow_20 back_2 ">
                 <div className="col pad_33 center items_start mobilepad_l24">
                     <div className="col start items_center">
                         {/* <div className="nice_circle_0" ></div> */}
@@ -136,20 +135,24 @@ export default function Home_dash({progress, setProgress}) {
                 </div>
             </div>
         </div>
-        <div ref={sections[4]} id="section_4" className="Contact_me1 row center corebox_18 mobilecorebox_18 mobilepad_l27 mobilepad_r27 back_2b">
+        <div ref={sections[4]} id="section_4" className="Contact_me1 row center corebox_20 mobilecorebox_18 mobilepad_l27 mobilepad_r27 back_2b">
             <div className="col">
-                <span className=" corebox_1  row center f_4 fore_green f700 ffam_0 fore_19">Interested in collaborating?</span>
-                <span className="maxedcorebox_x19 ls_28 fore_13 f500 ffam_0 corebox_6  mobilecorebox_8 row center f_0 lh_2">If you have an application you are interested in developing, a feature that you need built or a project that need coding, I’d love to help you with it.</span>
+
+                <span className=" corebox_1  row center f_4 f_m_3 fore_green f800 ffam_0 fore_19">Interested in collaborating?</span>
+                <span className="maxedcorebox_x20 ls_28 fore_13 f500 ffam_0 corebox_7  mobilecorebox_8 row center f_1 f_m_0 lh_2">
+                    <div className="maxedcorebox_x19">If you have an application you are interested in developing, a feature that you need built or a project that need coding, I’d love to help you with it.</div>
+                </span>
+
                 <div className="col center">
-                    <div className="row basis_42 allsize">
-                        <input placeholder="Name" className="corebox_3 mobilemar_b24 pad_l27 pad_t27 back_3 pad_b26" />
-                        <input placeholder="Mail" className="corebox_3 mobilemar_b24 pad_l27 pad_t27 back_3 pad_b26" />
+                    <div className="row basis_42 allsize border_b0 ">
+                        <input placeholder="Name" className="corebox_3 mobilemar_b24 pad_l27 pad_t27  pad_b26 ls_27 f_1 f_m_0" />
+                        <input placeholder="Subject" className="corebox_3 mobilemar_b24 pad_l27 pad_t27  pad_b26 ls_27 f_1 f_m_0 " />
                     </div>
 
-                    <textarea placeholder="Message" className="corebox_5 back_3 mobilemar_b24 mar_t24  mobilemar_t0 pad_l27 pad_t27" />
+                    <textarea placeholder="Text" className="corebox_12  mobilemar_b24 mar_t24  mobilemar_t0 pad_l27 pad_t27 f_1 f_m_0 boxshadow_20" />
                     <div className="corebox_9 col center border_t0">
-                        <form id="mail" method="post" action="mailto:dev.armando29@gmail.com?subject=Contact&amp;message=">
-                            <input className="special_btn_0 corebox_x10" type="submit" value="Send" />
+                        <form id="mail" method="post" action="mailto:armandosoto@sotoarmando.com?subject=Contact&amp;message=">
+                            <input className="special_btn_0 corebox_x10 ls_27 f_1 f_m_0" type="submit" value="Send" />
                         </form>
                     </div>
 
