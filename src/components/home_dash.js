@@ -14,6 +14,17 @@ export default function Home_dash({ progress, setProgress }) {
     function convertRemToPixels(rem) {
         return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
     }
+
+    
+    const handleNavgoto = (i) => {
+        if (i === 4) {
+            window.scrollTo(0,document.body.scrollHeight);
+        } else {
+            document.querySelector(["#section_" + i]).scrollIntoView({ block: "start" });
+            window.scroll(0, window.scrollY - (convertRemToPixels(4.275)));
+        }
+
+    }
     const progressMap = (() => {
         try {
             if (sections[0].current) {
@@ -21,7 +32,7 @@ export default function Home_dash({ progress, setProgress }) {
                 for (let i = 0; i < 5; i++) {
                     const { height, y } = sections[i].current.getBoundingClientRect()
 
-                    if ((((height - (convertRemToPixels(3.6) * 2.36139202117919921875)) * 0.75) + y) > 0) {
+                    if ((((height * 0.95)) + (y - convertRemToPixels(4.275)) ) > 0) {
                         setProgress(i)
                         return i
                     };
@@ -52,10 +63,11 @@ export default function Home_dash({ progress, setProgress }) {
     }, [])
 
     return <div className="col back_2" id="home_dash">
-        <div className="corebox_5 row end items_center ls_30 ffam_1 f_1 f800  fore_14 ">
+        <div className="corebox_5 row end items_center ls_30 ffam_1 f_1 f500  fore_14 ">
             <div className="row center maxedcorebox_x18 wrap ">
                 {
-                    ["Home", "Projects", "About", "Experiences", "Contact"].map((e, i) => <div onClick={() => document.querySelector(["#section_" + i]).scrollIntoView()} className={"transition_0 corebox_x" + [6, 6, 6, 8, 7][i] + " maxedcorebox_x" + [6, 6, 6, 8, 7][i] + " row center btn_u " + (progress == i ? "fore_20" : "")}>{e}</div>)
+                    ["Home", "Projects", "About", "Experiences", "Contact"].map((e, i) => 
+                        <div onClick={() => handleNavgoto(i) } className={"transition_0 corebox_x" + [6, 6, 6, 8, 7][i] + " maxedcorebox_x" + [6, 6, 6, 8, 7][i] + " row center btn_u " + (progress == i ? "fore_20" : "")}>{e}</div>)
                 }
             </div>
         </div>
@@ -90,7 +102,7 @@ export default function Home_dash({ progress, setProgress }) {
                 <Mobile_display />
             </div >
         </div>
-        <div ref={sections[1]} id="section_1" className="corebox_19 col pad_l33 pad_r33 mobilepad_l24 mobilepad_r21 border_01 center items_center border_02 overflowhidden">
+        <div ref={sections[1]} id="section_1" className="corebox_20 col pad_l33 pad_r33 mobilepad_l24 mobilepad_r21 border_01 center items_center border_02 overflowhidden">
             <div className="col allsize">
                 <span className=" f800 fore_11 row start items_center corebox_5  ls_27 lh_2 ffam_0 f_3 ">Some Learning Experiences</span>
                 <div className="row wrap basis_44 corebox_12 start items_center mar_b23 nmar_l20 nmar_r20 ">
@@ -124,7 +136,7 @@ export default function Home_dash({ progress, setProgress }) {
                 <img className="maxedcorebox_x5" src={"https://d92mrp7hetgfk.cloudfront.net/images/sites/misc/SmallerMicroverselogo_revised/original.jpg?1581442029"} />
             </div>
         </div>
-        <div ref={sections[3]} id="section_3" className="corebox_15 col pad_l33 pad_r33 mobilepad_l24 mobilepad_r21 border_01 center items_center border_02 overflowhidden">
+        <div ref={sections[3]} id="section_3" className="corebox_17 col pad_l33 pad_r33 mobilepad_l24 mobilepad_r21 border_01 center items_center border_02 overflowhidden">
             <div className="col allsize">
                 <span className=" f800 fore_11 row start items_center corebox_5  ls_27 lh_2 ffam_0 f_3 ">More Learning Experiences</span>
 
@@ -135,6 +147,7 @@ export default function Home_dash({ progress, setProgress }) {
                 </div>
             </div>
         </div>
+        <div className="corebox_8"></div>
         <div ref={sections[4]} id="section_4" className="Contact_me1 row center corebox_20 mobilecorebox_18 mobilepad_l27 mobilepad_r27 back_2b">
             <div className="col">
 
@@ -160,7 +173,7 @@ export default function Home_dash({ progress, setProgress }) {
 
             </div>
         </div>
-
+        
         <div className="col Contact_me1">
             <div className="row row_0 corebox_4 border_b0">
                 <span>Armandosoto@sotoarmando.com</span>
