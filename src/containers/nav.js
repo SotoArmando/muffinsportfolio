@@ -18,6 +18,20 @@ export default function Nav({ progress }) {
         const [entry] = entries
         setIsVisible(entry.isIntersecting)
     }
+
+    function convertRemToPixels(rem) {
+        return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
+    }
+
+    const handleNavgoto = (i) => {
+        if (i === 4) {
+            window.scrollTo(0,document.body.scrollHeight);
+        } else {
+            document.querySelector(["#section_" + i]).scrollIntoView({ block: "start" });
+            window.scroll(0, window.scrollY - (convertRemToPixels(4.275)));
+        }
+
+    }
     useEffect(() => {
         const element = document.querySelector("#anchor_0")
         const observer = new IntersectionObserver(callbackFunction, options)
@@ -64,11 +78,12 @@ export default function Nav({ progress }) {
             <div ref={containerRef} id="anchor_0" className="absolute top left corebox_5 " style={{ pointerEvents: "none" }}>
 
             </div>
-            <div className={"nav row corebox_5 back_2  z_index14 center"+ (isVisible ? "" : " boxshadow_20") } style={{ transform: (isVisible ? "translateY(-100%)" : "translateY(0)"), pointerEvents: (isVisible ? "none" : "all") }}>
-                <div className="nav_body corebox_5  end items_center ls_30 ffam_1 f_1 f800  fore_14 " style={{ maxWidth: "84.21053vw !important" }}>
+            <div className={"nav row corebox_5 back_2  z_index14 center" + (isVisible ? "" : " boxshadow_20")} style={{ transform: (isVisible ? "translateY(-100%)" : "translateY(0)"), pointerEvents: (isVisible ? "none" : "all") }}>
+                <div className="nav_body corebox_5  end items_center ls_30 ffam_1 f_1 f500  fore_14 " style={{ maxWidth: "84.21053vw !important" }}>
                     <div className="row center maxedcorebox_x18 wrap nice_nav_0">
                         {
-                            ["Home", "Projects", "About", "Experiences", "Contact"].map((e, i) => <div onClick={() => document.querySelector(["#section_"+i]).scrollIntoView() } className={"transition_0 corebox_x"+[6,6,6,8,7][i]+" maxedcorebox_x"+[6,6,6,8,7][i]+" row center btn_u " + (progress == i ? "fore_20" : "")}>{e}</div>)
+                            ["Home", "Projects", "About", "Experiences", "Contact"].map((e, i) =>
+                                <div onClick={() => handleNavgoto(i)} className={"transition_0 corebox_x" + [6, 6, 6, 8, 7][i] + " maxedcorebox_x" + [6, 6, 6, 8, 7][i] + " row center btn_u " + (progress == i ? "fore_20" : "")}>{e}</div>)
                         }
                     </div>
                 </div>
