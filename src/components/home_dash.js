@@ -175,7 +175,7 @@ export default function Home_dash({ progress, setProgress }) {
                         <textarea placeholder="Text" name="body" className="corebox_12 fore_11 ls_27 mobilemar_b24 mar_t24  mobilemar_t0 pad_l27 pad_t27 f_1 f_m_0 boxshadow_20" />
                         <div className="corebox_9 col center border_t0">
 
-                            <input  className="special_btn_0 corebox_x10 ls_27 f_1 f_m_0"  value="Send"  onClick={() => Opennewmail()} />
+                            <input  className="special_btn_0 corebox_x10 ls_27 f_1 f_m_0"  style={{textAlign:"center"}} value="Send"  onClick={() => Opennewmail()} />
 
                         </div>
 
