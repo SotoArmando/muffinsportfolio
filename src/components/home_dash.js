@@ -15,10 +15,10 @@ export default function Home_dash({ progress, setProgress }) {
         return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
     }
 
-    
+
     const handleNavgoto = (i) => {
         if (i === 4) {
-            window.scrollTo(0,document.body.scrollHeight);
+            window.scrollTo(0, document.body.scrollHeight);
         } else {
             document.querySelector(["#section_" + i]).scrollIntoView({ block: "start" });
             window.scroll(0, window.scrollY - (convertRemToPixels(4.275)));
@@ -32,7 +32,7 @@ export default function Home_dash({ progress, setProgress }) {
                 for (let i = 0; i < 5; i++) {
                     const { height, y } = sections[i].current.getBoundingClientRect()
 
-                    if ((((height * 0.95)) + (y - convertRemToPixels(4.275)) ) > 0) {
+                    if ((((height * 0.95)) + (y - convertRemToPixels(4.275))) > 0) {
                         setProgress(i)
                         return i
                     };
@@ -42,7 +42,15 @@ export default function Home_dash({ progress, setProgress }) {
 
     }).bind(sections)
 
+    const Opennewmail = () => {
+        
+        let body = document.querySelector("form [name='body']").value.replace(/[\n\r]/g,"%0D%0A") + "%0D%0A".repeat(3)
+        let subject = document.querySelector("form [name='subject']").value
+        let name = document.querySelector("form [name='name']").value
 
+        console.log(body, subject, name)
+        window.open('mailto:armandosoto@sotoarmando.com?subject='+subject+'&body='+body+'&name='+name);
+    }
 
     useEffect(() => {
         document.addEventListener("scroll", () => progressMap());
@@ -66,8 +74,8 @@ export default function Home_dash({ progress, setProgress }) {
         <div className="corebox_5 row end items_center ls_30 ffam_1 f_1 f700  fore_11 ">
             <div className="row center maxedcorebox_x18 wrap ">
                 {
-                    ["Home", "Projects", "About", "Experiences", "Contact"].map((e, i) => 
-                        <div onClick={() => handleNavgoto(i) } className={"transition_0 corebox_x" + [6, 6, 6, 8, 7][i] + " maxedcorebox_x" + [6, 6, 6, 8, 7][i] + " row center btn_u " + (progress == i ? "fore_20" : "")}>{e}</div>)
+                    ["Home", "Projects", "About", "Experiences", "Contact"].map((e, i) =>
+                        <div onClick={() => handleNavgoto(i)} className={"transition_0 corebox_x" + [6, 6, 6, 8, 7][i] + " maxedcorebox_x" + [6, 6, 6, 8, 7][i] + " row center btn_u " + (progress == i ? "fore_20" : "")}>{e}</div>)
                 }
             </div>
         </div>
@@ -105,7 +113,7 @@ export default function Home_dash({ progress, setProgress }) {
         <div ref={sections[1]} id="section_1" className="corebox_20 col pad_l33 pad_r33 mobilepad_l24 mobilepad_r21 border_01 center items_center border_02 overflowhidden">
             <div className="col allsize">
                 <span className=" f800 fore_11 row start items_center corebox_5  ls_27 lh_2 ffam_0 f_3 ">Some Learning Experiences</span>
-                <div className="row wrap basis_44 corebox_12 start items_center mar_b23 nmar_l20 nmar_r20 ">
+                <div className="row wrap basis_44 corebox_12 start items_center  nmar_l20 nmar_r20 ">
                     <Projectl isLast={true} name={"Muffinsmastermind"} pic="pic_mastermind_0" tags={["HTML/CSS", "REACT", "ES6"]} />
                     <Projectl isFirst={true} name={"Sotoarmandobrainspace"} pic="pic_e" tags={["HTML/CSS", "REACT", "ES6"]} />
                 </div>
@@ -121,7 +129,7 @@ export default function Home_dash({ progress, setProgress }) {
                 <span className=" f800 fore_11 row start items_center corebox_5  ls_27 lh_2 ffam_0 f_3 ">About Me</span>
                 <div className="row wrap basis_46  start items_center    ">
                     <span className="col center items_start ">
-                        <span className="maxedcorebox_x15 ffam_0 f600  ls_27  lh_3 f_0  ffam_0">
+                        <span className="maxedcorebox_x15  f500  ls_28 fore_14  lh_3 f_1  ">
                             Anime, coding, always look on cooking feed. Look through some of my work and experience! If you like what you see and have project you need coded, don’t hesistate to contact me.
                         </span>
                         {/* <div className="corebox_8 row start items_center">
@@ -148,43 +156,46 @@ export default function Home_dash({ progress, setProgress }) {
             </div>
         </div>
         <div className="corebox_8"></div>
-        <div ref={sections[4]} id="section_4" className="Contact_me1 row center corebox_20 mobilecorebox_18 mobilepad_l27 mobilepad_r27 back_2b">
-            <div className="col">
+        <div ref={sections[4]} id="section_4" className="Contact_me1 col space_between corebox_21 mobilecorebox_18 mobilepad_l27 mobilepad_r27 back_2b">
+            <div />
+            <div className="col pad_23 border_6">
 
                 <span className=" corebox_1  row center f_4 f_m_3 fore_green f800 ffam_0 fore_19">Interested in collaborating?</span>
-                <span className="maxedcorebox_x20 ls_28 fore_13 f500 ffam_0 corebox_7  mobilecorebox_8 row center f_1 f_m_0 lh_2">
+                <span className="maxedcorebox_x20 ls_28 fore_14 f500  corebox_7  mobilecorebox_8 row center f_1 f_m_0 lh_2">
                     <div className="maxedcorebox_x19">If you have an application you are interested in developing, a feature that you need built or a project that need coding, I’d love to help you with it.</div>
                 </span>
+                <form  name="mail" >
+                    <div className="col center">
 
-                <div className="col center">
-                    <div className="row basis_42 allsize border_b0 ">
-                        <input placeholder="Name" className="corebox_3 mobilemar_b24 pad_l27 pad_t27  pad_b26 ls_27 f_1 f_m_0" />
-                        <input placeholder="Subject" className="corebox_3 mobilemar_b24 pad_l27 pad_t27  pad_b26 ls_27 f_1 f_m_0 " />
+                        <div className="row basis_42 allsize border_b0 ">
+                            <input name="name"  placeholder="Name" className="corebox_3 mobilemar_b24 pad_l27 pad_t27  pad_b26 ls_27 f_1 f_m_0" />
+                            <input name="subject"  placeholder="Subject" className="corebox_3 mobilemar_b24 pad_l27 pad_t27  pad_b26 ls_27 f_1 f_m_0 " />
+                        </div>
+
+                        <textarea placeholder="Text" name="body" className="corebox_12 fore_11 ls_27 mobilemar_b24 mar_t24  mobilemar_t0 pad_l27 pad_t27 f_1 f_m_0 boxshadow_20" />
+                        <div className="corebox_9 col center border_t0">
+
+                            <input  className="special_btn_0 corebox_x10 ls_27 f_1 f_m_0"  value="Send"  onClick={() => Opennewmail()} />
+
+                        </div>
+
                     </div>
+                </form>
+            </div>
 
-                    <textarea placeholder="Text" className="corebox_12  mobilemar_b24 mar_t24  mobilemar_t0 pad_l27 pad_t27 f_1 f_m_0 boxshadow_20" />
-                    <div className="corebox_9 col center border_t0">
-                        <form id="mail" method="post" action="mailto:armandosoto@sotoarmando.com?subject=Contact&amp;message=">
-                            <input className="special_btn_0 corebox_x10 ls_27 f_1 f_m_0" type="submit" value="Send" />
-                        </form>
-                    </div>
-
+            <div className="col Contact_me1">
+                <div className="row row_0 corebox_4 border_b0">
+                    <span>Armandosoto@sotoarmando.com</span>
+                    <a href="https://www.linkedin.com/in/asotomelo/" className="svg linkedin" />
+                    <a href="https://github.com/SotoArmando" className="svg github" />
+                    <a href="https://twitter.com/sotoarmando029" className="svg twitter" />
+                    <a href="https://stackoverflow.com/users/5007444/sotoarmando" className="svg stack-overflow" />
                 </div>
 
+                <span className="bottom_title">© 2020  Armando Soto</span>
             </div>
         </div>
-        
-        <div className="col Contact_me1">
-            <div className="row row_0 corebox_4 border_b0">
-                <span>Armandosoto@sotoarmando.com</span>
-                <a href="https://www.linkedin.com/in/asotomelo/" className="svg linkedin" />
-                <a href="https://github.com/SotoArmando" className="svg github" />
-                <a href="https://twitter.com/sotoarmando029" className="svg twitter" />
-                <a href="https://stackoverflow.com/users/5007444/sotoarmando" className="svg stack-overflow" />
-            </div>
 
-            <span className="bottom_title">© 2020  Armando Soto</span>
-        </div>
 
     </div>
 

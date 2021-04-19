@@ -447,7 +447,8 @@
 
     $borders: ("0", rgb(230, 230, 230), 1px), ("1", rgb(190, 190, 190), 1rem * core(15)),
         ("2", rgb(69, 208, 156), 1rem * core(15)), ("3", rgb(242.25, 242.25, 242.25), 1rem * core(15)),
-        ("4", rgb(229.5, 229.5, 229.5), 1rem * core(17)), ("5", #0bbdad, 1rem * core(17));
+        ("4", rgb(229.5, 229.5, 229.5), 1rem * core(17)), ("5", #0bbdad, 1rem * core(17)),
+        ("6",  #0bbdad, 1rem * core(20));
 
     $icons: ("back", url(./css/svg/arrow_back_ios-24px.svg)), ("search", url("./css/svg/search-24px\ \(1\).svg")),
         ("filter", url("./css/svg/filter_alt-24px.svg")), ("twitter", url("./css/svg/013-twitter-1.svg")),

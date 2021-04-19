@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 export default function Projectl({ isFirst, isLast, name, pic, tags }) {
     const cname = "allsize back_red corebox_15 col items_start start f700 pad_l24 pad_r24  f_1  ffam_0  secbacksize_14 msecbacksize_11 " + pic
-    let classname = "corebox_13  tcenter row center  relative pad_l20 pad_r20   mobilepad_t24 btn hover relative btn"
+    let classname = "corebox_13  row center  relative pad_l20 pad_r20   mobilepad_t24 btn hover relative btn"
     return <span className={classname}>
         <div className="back_3 corebox_13">
             <div className={cname}>
