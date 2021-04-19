@@ -48,7 +48,7 @@ export default function Nav({ progress }) {
                         <div className="svg menu" onClick={handleSidenavtoggle} />
                     </div>
                     <div>
-                        {/* <span>Homepage</span>
+                        {/* <span>Homepage</span>m
                     <span>Porfolio</span>
                     <span>About</span>
                     <span>Contact</span> */}

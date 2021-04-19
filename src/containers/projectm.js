@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 export default function Projectm({ isFirst, isLast, name, pic, tags }) {
     const cname = "allsize  corebox_12 col items_start start f_0  f700 pad_l24 pad_r24  ffam_0 pic_e secbacksize_12 msecbacksize_11 " + pic
-    let classname = "corebox_12  tcenter row center  relative pad_l20 pad_r20   mobilepad_t24  hover relative btn"
+    let classname = "corebox_12  tcenter row center  relative pad_l20 pad_r20   mobilepad_t24  hover relative btn mar_t23"
     return <span className={classname}>
         <div className="back_3 corebox_12">
             <div className={cname}>
