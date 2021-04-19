@@ -63,7 +63,7 @@ export default function Home_dash({ progress, setProgress }) {
     }, [])
 
     return <div className="col back_2" id="home_dash">
-        <div className="corebox_5 row end items_center ls_30 ffam_1 f_1 f500  fore_14 ">
+        <div className="corebox_5 row end items_center ls_30 ffam_1 f_1 f700  fore_11 ">
             <div className="row center maxedcorebox_x18 wrap ">
                 {
                     ["Home", "Projects", "About", "Experiences", "Contact"].map((e, i) => 

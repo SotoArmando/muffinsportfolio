@@ -79,7 +79,7 @@ export default function Nav({ progress }) {
 
             </div>
             <div className={"nav row corebox_5 back_2  z_index14 center" + (isVisible ? "" : " boxshadow_20")} style={{ transform: (isVisible ? "translateY(-100%)" : "translateY(0)"), pointerEvents: (isVisible ? "none" : "all") }}>
-                <div className="nav_body corebox_5  end items_center ls_30 ffam_1 f_1 f500  fore_14 " style={{ maxWidth: "84.21053vw !important" }}>
+                <div className="nav_body corebox_5  end items_center ls_30 ffam_1 f_1 f700  fore_11" style={{ maxWidth: "84.21053vw !important" }}>
                     <div className="row center maxedcorebox_x18 wrap nice_nav_0">
                         {
                             ["Home", "Projects", "About", "Experiences", "Contact"].map((e, i) =>
