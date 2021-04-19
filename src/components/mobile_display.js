@@ -153,7 +153,7 @@ export default function Mobile_display() {
                             <span className={"svg eye"}></span>
                         </a>
                     </div>
-                    <div ref={ref_0} className={"no_disable disable_opasity backsize_17 mbacksize_15  mobile_app_jpg " + they[space_1]}  ></div>
+                    <div ref={ref_0} className={"no_disable disable_opasity backsize_18 mbacksize_15  mobile_app_jpg " + they[space_1]}  ></div>
                 </div>
             </CSSTransition>
             <CSSTransition
@@ -176,7 +176,7 @@ export default function Mobile_display() {
 
                         </a>
                     </div>
-                    <div ref={ref_1} className={" disable_opasity backsize_17 mbacksize_15  mobile_app_jpg " + they[space_0]} ></div>
+                    <div ref={ref_1} className={" disable_opasity backsize_18 mbacksize_15  mobile_app_jpg " + they[space_0]} ></div>
                 </div>
             </CSSTransition>
             <CSSTransition
@@ -200,7 +200,7 @@ export default function Mobile_display() {
 
                         </a>
                     </div>
-                    <div ref={ref_2} className={"no_disable disable_opasity mobile_app_jpg backsize_17 mbacksize_15 mobile pic_" + space_3}  ></div>
+                    <div ref={ref_2} className={"no_disable disable_opasity mobile_app_jpg backsize_18 mbacksize_15 mobile pic_" + space_3}  ></div>
                 </div>
             </CSSTransition>
             <CSSTransition
@@ -223,7 +223,7 @@ export default function Mobile_display() {
 
                         </a>
                     </div>
-                    <div ref={ref_3} className={" disable_opasity mobile_app_jpg backsize_17 mbacksize_15 mobile pic_" + space_2} ></div>
+                    <div ref={ref_3} className={" disable_opasity mobile_app_jpg backsize_18 mbacksize_15 mobile pic_" + space_2} ></div>
                 </div>
             </CSSTransition>
            
