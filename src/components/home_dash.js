@@ -43,13 +43,13 @@ export default function Home_dash({ progress, setProgress }) {
     }).bind(sections)
 
     const Opennewmail = () => {
-        
-        let body = document.querySelector("form [name='body']").value.replace(/[\n\r]/g,"%0D%0A") + "%0D%0A".repeat(3)
+
+        let body = document.querySelector("form [name='body']").value.replace(/[\n\r]/g, "%0D%0A") + "%0D%0A".repeat(3)
         let subject = document.querySelector("form [name='subject']").value
         let name = document.querySelector("form [name='name']").value
 
         console.log(body, subject, name)
-        window.open('mailto:armandosoto@sotoarmando.com?subject='+subject+'&body='+body+'&name='+name);
+        window.open('mailto:armandosoto@sotoarmando.com?subject=' + subject + '&body=' + body + '&name=' + name);
     }
 
     useEffect(() => {
@@ -98,10 +98,12 @@ export default function Home_dash({ progress, setProgress }) {
                         </span>
                         </span>
                         <div className="row start items_center corebox_5 ">
-                            <a href="https://www.linkedin.com/in/asotomelo/" className="svg linkedin mar_r25" />
-                            <a href="https://github.com/SotoArmando" className="svg github corebox_x3" />
-                            <a href="https://twitter.com/sotoarmando029" className="svg twitter corebox_x3" />
-                            <a href="https://stackoverflow.com/users/5007444/sotoarmando" className="svg stack-overflow corebox_x3" />
+
+                            <div className="corebox_x4 center"> <a href="https://github.com/SotoArmando" className="svg github corebox_x3 iconsize_31" /></div>
+                            <div className="corebox_x4 center"> <a href="https://twitter.com/sotoarmando029" className="svg twitter corebox_x3 iconsize_31" /></div>
+                            <div className="corebox_x4 center"> <a href="https://stackoverflow.com/users/5007444/sotoarmando" className="svg stack-overflow corebox_x3 iconsize_31" /></div>
+                            <div className="corebox_x3 start items_center"> <a href="https://www.linkedin.com/in/asotomelo/" className="svg linkedin iconsize_31" /></div>
+
                         </div>
                         {/* <Sendmail /> */}
                     </div>
@@ -158,42 +160,48 @@ export default function Home_dash({ progress, setProgress }) {
         <div className="corebox_8"></div>
         <div ref={sections[4]} id="section_4" className="Contact_me1 col space_between corebox_21 mobilecorebox_18 mobilepad_l27 mobilepad_r27 back_2b">
             <div />
-            <div className="col pad_23 border_6">
+            <div className="col pad_35 pad_t37 back_2d">
 
                 <span className=" corebox_1  row center f_4 f_m_3 fore_green f800 ffam_0 fore_19">Interested in collaborating?</span>
                 <span className="maxedcorebox_x20 ls_28 fore_14 f500  corebox_7  mobilecorebox_8 row center f_1 f_m_0 lh_2">
                     <div className="maxedcorebox_x19">If you have an application you are interested in developing, a feature that you need built or a project that need coding, I’d love to help you with it.</div>
                 </span>
-                <form  name="mail" >
+                <form name="mail" >
                     <div className="col center">
 
-                        <div className="row basis_42 allsize border_b0 ">
-                            <input name="name"  placeholder="Name" className="corebox_3 mobilemar_b24 pad_l27 pad_t27  pad_b26 ls_27 f_1 f_m_0" />
-                            <input name="subject"  placeholder="Subject" className="corebox_3 mobilemar_b24 pad_l27 pad_t27  pad_b26 ls_27 f_1 f_m_0 " />
+                        <div className="row basis_42 allsize  ">
+                            <input name="name" placeholder="Name" className="back_2 corebox_3 mobilemar_b24 pad_l27   pad_b14 ls_27 f_1 f_m_0" />
+                            <input name="subject" placeholder="Subject" className="back_2 corebox_3 mobilemar_b24 pad_l27   pad_b14 ls_27 f_1 f_m_0 " />
                         </div>
 
-                        <textarea placeholder="Text" name="body" className="corebox_12 fore_11 ls_27 mobilemar_b24 mar_t24  mobilemar_t0 pad_l27 pad_t27 f_1 f_m_0 boxshadow_20" />
+                        <textarea placeholder="Text" name="body" className="back_2 corebox_12 fore_11 ls_27 mobilemar_b24 mar_t24  mobilemar_t0 pad_l27 pad_t27 f_1 f_m_0 " />
                         <div className="corebox_9 col center border_t0">
 
-                            <input  className="special_btn_0 corebox_x10 ls_27 f_1 f_m_0"  style={{textAlign:"center"}} value="Send"  onClick={() => Opennewmail()} />
+                            <input className="special_btn_0 corebox_x10 ls_27 f_1 f_m_0" style={{ textAlign: "center" }} value="Send" onClick={() => Opennewmail()} />
 
                         </div>
 
                     </div>
                 </form>
-            </div>
 
-            <div className="col Contact_me1">
-                <div className="row row_0 corebox_4 border_b0">
-                    <span>Armandosoto@sotoarmando.com</span>
-                    <a href="https://www.linkedin.com/in/asotomelo/" className="svg linkedin" />
-                    <a href="https://github.com/SotoArmando" className="svg github" />
-                    <a href="https://twitter.com/sotoarmando029" className="svg twitter" />
-                    <a href="https://stackoverflow.com/users/5007444/sotoarmando" className="svg stack-overflow" />
+                <div className="col Contact_me1">
+                    <div className="row row_0 corebox_8  f_1 ">
+                        <span className="f500 f_0 ls_28 corebox_x14 center fore_21">Armandosoto@sotoarmando.com</span>
+                        <div className="corebox_x4 center"> <a href="https://github.com/SotoArmando" className="svg github corebox_x3 iconsize_31" /></div>
+                        <div className="corebox_x4 center"> <a href="https://twitter.com/sotoarmando029" className="svg twitter corebox_x3 iconsize_31" /></div>
+                        <div className="corebox_x4 center"> <a href="https://stackoverflow.com/users/5007444/sotoarmando" className="svg stack-overflow corebox_x3 iconsize_31" /></div>
+                        <div className="corebox_x3 start items_center"> <a href="https://www.linkedin.com/in/asotomelo/" className="svg linkedin iconsize_31" /></div>
+
+
+
+                    </div>
+
+                    <span className="f500 f_0 ls_28 fore_21">© 2020  Armando Soto</span>
+                    <div className="corebox_5" />
                 </div>
-
-                <span className="bottom_title">© 2020  Armando Soto</span>
             </div>
+
+
         </div>
 
 
