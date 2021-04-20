@@ -99,10 +99,10 @@ export default function Home_dash({ progress, setProgress }) {
                         </span>
                         <div className="row start items_center corebox_5 ">
 
-                            <div className="corebox_x4 center"> <a href="https://github.com/SotoArmando" className="svg github corebox_x3 iconsize_31" /></div>
+                            <div className="corebox_x3 start items_center"> <a href="https://github.com/SotoArmando" className="svg github corebox_x3 iconsize_31" /></div>
                             <div className="corebox_x4 center"> <a href="https://twitter.com/sotoarmando029" className="svg twitter corebox_x3 iconsize_31" /></div>
                             <div className="corebox_x4 center"> <a href="https://stackoverflow.com/users/5007444/sotoarmando" className="svg stack-overflow corebox_x3 iconsize_31" /></div>
-                            <div className="corebox_x3 start items_center"> <a href="https://www.linkedin.com/in/asotomelo/" className="svg linkedin iconsize_31" /></div>
+                            <div className="corebox_x4 center "> <a href="https://www.linkedin.com/in/asotomelo/" className="svg linkedin iconsize_31" /></div>
 
                         </div>
                         {/* <Sendmail /> */}
@@ -187,10 +187,10 @@ export default function Home_dash({ progress, setProgress }) {
                 <div className="col Contact_me1">
                     <div className="row row_0 corebox_8  f_1 ">
                         <span className="f500 f_0 ls_28 corebox_x14 center fore_21">Armandosoto@sotoarmando.com</span>
-                        <div className="corebox_x4 center"> <a href="https://github.com/SotoArmando" className="svg github corebox_x3 iconsize_31" /></div>
+                        <div className="corebox_x3 start items_center "> <a href="https://github.com/SotoArmando" className="svg github corebox_x3 iconsize_31" /></div>
                         <div className="corebox_x4 center"> <a href="https://twitter.com/sotoarmando029" className="svg twitter corebox_x3 iconsize_31" /></div>
                         <div className="corebox_x4 center"> <a href="https://stackoverflow.com/users/5007444/sotoarmando" className="svg stack-overflow corebox_x3 iconsize_31" /></div>
-                        <div className="corebox_x3 start items_center"> <a href="https://www.linkedin.com/in/asotomelo/" className="svg linkedin iconsize_31" /></div>
+                        <div className="corebox_x4 center"> <a href="https://www.linkedin.com/in/asotomelo/" className="svg linkedin iconsize_31" /></div>
 
 
 
