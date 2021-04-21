@@ -25,15 +25,20 @@ export default function Home_dash({ progress, setProgress }) {
         }
 
     }
+    const anchor_0 = (convertRemToPixels(3.6 * (1.1875 ** 10)))
     const progressMap = (() => {
         try {
             if (sections[0].current) {
 
-                for (let i = 0; i < 5; i++) {
-                    const { height, y } = sections[i].current.getBoundingClientRect()
 
-                    if ((((height * 0.95)) + (y - convertRemToPixels(4.275))) > 0) {
+                for (let i = 0; i < 5; i++) {
+                    let current = sections[i].current
+                    const { height, y } = current.getBoundingClientRect()
+                    
+                    if ((((height * 0.95) - anchor_0) + (y - convertRemToPixels(4.275))) > 0) {
+                        current.classList.add("active")
                         setProgress(i)
+                        
                         return i
                     };
                 }
@@ -79,7 +84,7 @@ export default function Home_dash({ progress, setProgress }) {
                 }
             </div>
         </div>
-        <div ref={sections[0]} id="section_0" className="corebox_20 row center border_02 back_2c">
+        <div ref={sections[0]} id="section_0" className="section_c0 active corebox_20 row center border_02 back_2c">
             <div className="row basis_44 corebox_18 border_t0 border_b0 boxshadow_20 back_2 ">
                 <div className="col pad_33 center items_start mobilepad_l24">
                     <div className="col start items_center">
@@ -112,7 +117,7 @@ export default function Home_dash({ progress, setProgress }) {
                 <Mobile_display />
             </div >
         </div>
-        <div ref={sections[1]} id="section_1" className="corebox_20 col pad_l33 pad_r33 mobilepad_l24 mobilepad_r21 border_01 center items_center border_02 overflowhidden">
+        <div ref={sections[1]} id="section_1" className="section_c0 corebox_20 col pad_l33 pad_r33 mobilepad_l24 mobilepad_r21 border_01 center items_center border_02 overflowhidden">
             <div className="col allsize">
                 <span className=" f800 fore_11 row start items_center corebox_5  ls_27 lh_2 ffam_0 f_3 ">Some Learning Experiences</span>
                 <div className="row wrap basis_44 corebox_12 start items_center  nmar_l20 nmar_r20 ">
@@ -126,7 +131,7 @@ export default function Home_dash({ progress, setProgress }) {
                 </div>
             </div>
         </div>
-        <div ref={sections[2]} id="section_2" className="corebox_15 row pad_l33 pad_r33 mobilepad_l27 mobilepad_r21 border_01 center items_center border_02 overflowhidden basis_45 center" >
+        <div ref={sections[2]} id="section_2" className="section_c0 corebox_15 row pad_l33 pad_r33 mobilepad_l27 mobilepad_r21 border_01 center items_center border_02 overflowhidden basis_45 center" >
             <div className="col allsize">
                 <span className=" f800 fore_11 row start items_center corebox_5  ls_27 lh_2 ffam_0 f_3 ">About Me</span>
                 <div className="row wrap basis_46  start items_center    ">
@@ -146,7 +151,7 @@ export default function Home_dash({ progress, setProgress }) {
                 <img className="maxedcorebox_x5" src={"https://d92mrp7hetgfk.cloudfront.net/images/sites/misc/SmallerMicroverselogo_revised/original.jpg?1581442029"} />
             </div>
         </div>
-        <div ref={sections[3]} id="section_3" className="corebox_17 col pad_l33 pad_r33 mobilepad_l24 mobilepad_r21 border_01 center items_center border_02 overflowhidden">
+        <div ref={sections[3]} id="section_3" className="section_c0 corebox_17  col pad_l33 pad_r33 mobilepad_l24 mobilepad_r21 border_01 center items_center border_02 overflowhidden">
             <div className="col allsize">
                 <span className=" f800 fore_11 row start items_center corebox_5  ls_27 lh_2 ffam_0 f_3 ">More Learning Experiences</span>
 
@@ -191,9 +196,6 @@ export default function Home_dash({ progress, setProgress }) {
                         <div className="corebox_x4 center"> <a href="https://twitter.com/sotoarmando029" className="svg twitter corebox_x3 iconsize_31" /></div>
                         <div className="corebox_x4 center"> <a href="https://stackoverflow.com/users/5007444/sotoarmando" className="svg stack-overflow corebox_x3 iconsize_31" /></div>
                         <div className="corebox_x4 center"> <a href="https://www.linkedin.com/in/asotomelo/" className="svg linkedin iconsize_31" /></div>
-
-
-
                     </div>
 
                     <span className="f500 f_0 ls_28 fore_21">© 2020  Armando Soto</span>
