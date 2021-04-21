@@ -134,9 +134,9 @@ export default function Home_dash({ progress, setProgress }) {
                         <span className="maxedcorebox_x15  f500  ls_28 fore_14  lh_3 f_1  ">
                             Anime, coding, always look on cooking feed. Look through some of my work and experience! If you like what you see and have project you need coded, don’t hesistate to contact me.
                         </span>
-                        {/* <div className="corebox_8 row start items_center">
-                            <Sendmail />
-                        </div> */}
+                        <div className="corebox_8 row start items_center">
+                            <div class="back_5 corebox_5 maxedcorebox_x12 center f800 f_1 fore_11 btn_u">Get my resume</div>
+                        </div>
                     </span>
                     <span></span>
                 </div>
@@ -160,8 +160,8 @@ export default function Home_dash({ progress, setProgress }) {
         <div className="corebox_8"></div>
         <div ref={sections[4]} id="section_4" className="Contact_me1 col space_between corebox_21 mobilecorebox_18 mobilepad_l27 mobilepad_r27 back_2b">
             <div />
-            <div className="col pad_35 pad_t37 back_2d">
-
+            <div className="col pad_35 pad_t37 back_2d corebox_21 maxedcorebox_x23 center">
+                <div className="corebox_10" />
                 <span className=" corebox_1  row center f_4 f_m_3 fore_green f800 ffam_0 fore_19">Interested in collaborating?</span>
                 <span className="maxedcorebox_x20 ls_28 fore_14 f500  corebox_7  mobilecorebox_8 row center f_1 f_m_0 lh_2">
                     <div className="maxedcorebox_x19">If you have an application you are interested in developing, a feature that you need built or a project that need coding, I’d love to help you with it.</div>
