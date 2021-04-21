@@ -158,15 +158,15 @@ export default function Home_dash({ progress, setProgress }) {
             </div>
         </div>
         <div className="corebox_8"></div>
-        <div ref={sections[4]} id="section_4" className="Contact_me1 col space_between corebox_21 mobilecorebox_18 mobilepad_l27 mobilepad_r27 back_2b">
+        <div ref={sections[4]} id="section_4" className="Contact_me1 back_2d col space_between corebox_13 mobilecorebox_18 mobilepad_l27 mobilepad_r27 back_2b">
             <div />
-            <div className="col pad_35 pad_t37 back_2d corebox_21 maxedcorebox_x23 center">
-                <div className="corebox_10" />
+            <div className="col pad_35 pad_t37  corebox_13 maxedcorebox_x23 center">
+            
                 <span className=" corebox_1  row center f_4 f_m_3 fore_green f800 ffam_0 fore_19">Interested in collaborating?</span>
                 <span className="maxedcorebox_x20 ls_28 fore_14 f500  corebox_7  mobilecorebox_8 row center f_1 f_m_0 lh_2">
                     <div className="maxedcorebox_x19">If you have an application you are interested in developing, a feature that you need built or a project that need coding, I’d love to help you with it.</div>
                 </span>
-                <form name="mail" >
+                <form name="mail" className="allsize maxedcorebox_x20">
                     <div className="col center">
 
                         <div className="row basis_42 allsize  ">
@@ -183,7 +183,7 @@ export default function Home_dash({ progress, setProgress }) {
 
                     </div>
                 </form>
-
+          
                 <div className="col Contact_me1">
                     <div className="row row_0 corebox_8  f_1 ">
                         <span className="f500 f_0 ls_28 corebox_x14 center fore_21">Armandosoto@sotoarmando.com</span>
@@ -197,7 +197,7 @@ export default function Home_dash({ progress, setProgress }) {
                     </div>
 
                     <span className="f500 f_0 ls_28 fore_21">© 2020  Armando Soto</span>
-                    <div className="corebox_5" />
+                    <div className="corebox_3" />
                 </div>
             </div>
 
