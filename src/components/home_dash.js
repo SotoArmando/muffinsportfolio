@@ -35,7 +35,7 @@ export default function Home_dash({ progress, setProgress }) {
                     let current = sections[i].current
                     const { height, y } = current.getBoundingClientRect()
                     
-                    if ((((height * 0.95) - anchor_0) + (y - convertRemToPixels(4.275))) > 0) {
+                    if ((((height * 0.95) - anchor_0) + (y - convertRemToPixels(3.6 * (1.1875 ** 9)))) > 0) {
                         current.classList.add("active")
                         setProgress(i)
                         
