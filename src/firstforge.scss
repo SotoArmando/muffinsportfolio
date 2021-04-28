@@ -471,10 +471,12 @@
     .section_c0 {
         opacity: 0;
         -webkit-opacity: 0;
-        will-change: opacity, transform;
+        will-change: opacity, transform, -webkit-transition, -webkit-transform;
+      
         transition: opacity 300ms, transform 300ms;
         -webkit-transition: opacity 300ms, transform 300ms;
         transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+        -webkit-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
         transform: translateY(3.6rem * core_font(5));
         -webkit-transform: translateY(3.6rem * core_font(5));
         &.active {
