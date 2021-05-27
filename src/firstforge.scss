@@ -1,3 +1,13 @@
+@function core_0($base) {
+    $result: 1 / 1.61803398875;
+    @for $_ from 0 through $base {
+            $result: $result * 1.61803398875;   
+    }
+    @return $result;
+}
+
+
+
 @function core($base) {
     $result: 0.009658113525734344;
     @for $_ from 1 through $base {
@@ -133,24 +143,37 @@
     @for $i from 0 through 50 {
         .f_#{$i} {
             font-size: 1rem * core_font($i);
+        
+        }
+        &.lh_#{$i} {
+            line-height: (1em ) * core($i + 27);
+        }
+
+        @media (orientation: portrait), (max-width: 1000px) {
+            &.mobilelh_#{$i} {
+                line-height: (1em ) * core($i + 27) !important;
+            }
+        }
+        .f0_#{$i} {
+            font-size: 1rem * core_0($i);
             @for $ii from 0 through 50 {
                 &.lh_#{$ii} {
-                    line-height: (1rem * core_font($i)) * core($ii + 27);
+                    line-height: (1em ) * core($ii + 27);
                 }
 
                 @media (orientation: portrait), (max-width: 1000px) {
                     &.mobilelh_#{$ii} {
-                        line-height: (1rem * core_font($i)) * core($ii + 27) !important;
+                        line-height: (1em ) * core($ii + 27);
                     }
                 }
             }
         }
-
+      
         .ls_#{$i} {
-            letter-spacing: 0.025rem * core($i);
+            letter-spacing: 0.025em * core($i);
 
             &::placeholder {
-                letter-spacing: 0.025rem * core($i);
+                letter-spacing: 0.025em * core($i);
             }
         }
     }
@@ -340,6 +363,12 @@
         overflow-x: hidden;
     }
 
+    .root_body {
+        will-change: transform;
+        transform: translate3d(0, 0, 0);
+        -webkit-transform: translate3d(0, 0, 0);
+    }
+
     input,
     textarea {
         font-family: "Poppins";
@@ -376,6 +405,7 @@
             padding-right: unset !important;
         }
     }
+    
 
     .nav {
         position: fixed;
@@ -499,7 +529,7 @@
         ("15", rgb(252.45, 252.45, 252.45)), ("16", rgb(249.9, 249.9, 249.9)), ("17", rgb(191.25, 191.25, 191.25)),
         ("18", rgb(25.5, 25.5, 25.5)), ("19", rgb(87, 242, 224)), ("20", rgb(47, 47, 47)), ("21", #0bbdad),
         ("22", linear-gradient(180deg, rgba(0, 0, 0, 0.24) -30%, rgba(0, 0, 0, 0) 98.35%)), ("23", rgb(250, 250, 250)),
-        ("24",rgb(83 ,238 ,191));
+        ("24",rgb(83 ,238 ,191)) , ("25",#53eebf);
 
     $fore-colors: ("0", #008000), ("1", #008000), ("2", #e490b7), ("4", rgba(56, 56, 56, 0.24)),
         ("6", rgba(0, 0, 15, 0.34)), ("5", #383838), ("7", rgba(56, 56, 56, 0.94)), ("8", #3838383d),
@@ -861,6 +891,10 @@ $hover-msg-mobile: ("more", "Tap again for more details"), ("more_1", "Click for
         display: none;
     }
 
+    .mobilehide_whennotfore20:not(.fore_20) {
+        display: none;
+    }
+
     html {
         font-size: 1rem * core(27);
     }
@@ -888,8 +922,14 @@ $hover-msg-mobile: ("more", "Tap again for more details"), ("more_1", "Click for
         }
 
         .mobilemaxedcorebox_#{$i} {
-            min-height: 3.6rem * core($i + 23);
+          
             max-height: 3.6rem * core($i + 23);
+            height: 100%;
+        }
+        
+        .mobilemaxedcorebox_x#{$i} {
+         
+            max-width: 3.6rem * core($i + 23);
             width: 100%;
         }
         .mobilecorebox_#{$i} {
