@@ -28,7 +28,7 @@ export default function Homelanding() {
                 </div>
             </div>
         </div>
-        <div className="center col items_start mobilehide pic_pat0 cover">
+        <div className="center col items_start mobilehide back_blue_o0  ">
             {/* <Wrappedrow item={squareElement} list={["microverse","presidencia","unapec"]}  basis={29} marginh={30} marginv={30} className="items_start" />
             <Wrappedrow item={squareElementB} list={[0,0,0]}  basis={28} marginh={30} marginv={30} className="corebox_12 center" /> */}
         </div>
