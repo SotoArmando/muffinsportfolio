@@ -123,6 +123,7 @@ $--font-family-karla:  "Karla",'Times New Roman';
   }
 
   .modal {
+    min-width: 100% * core(26);
     max-width: 100% * core(26);
   }
   
