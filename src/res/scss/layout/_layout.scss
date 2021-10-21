@@ -420,10 +420,13 @@
   }
 }
 
+a { color: inherit; } 
+
 @each $color in $fore-colors {
   &.fore_#{nth($color,1)} {
     color: nth($color, 2);
   }
+
 
   &.foreborder_#{nth($color,1)} {
     border: 1rem * core(15) solid nth($color, 2);

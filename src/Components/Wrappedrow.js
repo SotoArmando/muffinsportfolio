@@ -10,6 +10,7 @@ export default function Wrappedrow({
   marginv,
   testid,
   className,
+  gridclassName,
   marginvoff,
   paginator,
   pagelimit,
@@ -24,7 +25,7 @@ export default function Wrappedrow({
           basis - 1
         } ${g || ''}basis_${basis} nmar_l${marginh} nmar_r${marginh} nmar_t${
           marginvoff || marginv
-        } nmar_b${marginvoff || marginv}  center`}
+        } nmar_b${marginvoff || marginv}  center ${gridclassName || ''}`}
       >
         {paginate ? paginator(list, pagelimit, page).map((e, i) => (
           <Item

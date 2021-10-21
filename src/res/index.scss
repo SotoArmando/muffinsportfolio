@@ -122,6 +122,10 @@ $--font-family-karla:  "Karla",'Times New Roman';
     border: 1px solid red;
   }
 
+  .modal {
+    max-width: 100% * core(26);
+  }
+  
   html {
     overflow-x: hidden;
     font-size: 1rem;

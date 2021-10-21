@@ -1,5 +1,5 @@
 import { Link, Route, BrowserRouter,Switch } from 'react-router-dom';
-import Homelanding from './Components/Homelanding';
+import Homelandingsection from './Components/Homelandingsection';
 import Wrappedrow from './Components/Wrappedrow';
 import Homeprojectssection from './Components/Homeprojectssection';
 import Pathnavigatorhandler from './Containers/Pathnavigatorhandler';
@@ -10,7 +10,7 @@ function App() {
 
 
   const paths = {
-    "/": [<Homelanding />, <Homeprojectssection />, <Homecollabsection />],
+    "/": [<Homelandingsection />, <Homeprojectssection />, <Homecollabsection />],
   }
 
   return (
