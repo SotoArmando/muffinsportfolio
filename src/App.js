@@ -5,12 +5,13 @@ import Homeprojectssection from './Components/Homeprojectssection';
 import Pathnavigatorhandler from './Containers/Pathnavigatorhandler';
 import './res/index.scss';
 import Homecollabsection from './Components/Homecollabsection';
+import Homeaboutsection from './Components/Homeaboutsection';
 
 function App() {
 
 
   const paths = {
-    "/": [<Homelandingsection />, <Homeprojectssection />, <Homecollabsection />],
+    "/": [<Homelandingsection />, <Homeprojectssection />, <Homeaboutsection />, <Homecollabsection />],
   }
 
   return (
