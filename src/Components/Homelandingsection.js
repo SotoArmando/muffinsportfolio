@@ -34,7 +34,7 @@ export default function Homelandingsection() {
 
     return <div className="corebox_19 row wrap gbasis_43  ">
         <div className="center col corebox_18 mobilecorebox_15 back_2">
-            <div className="maxedcorebox_x19 col center items_start">
+            <div className="maxedcorebox_x18 col center items_start">
                 <div className="corebox_10 row items_center">
                     <div className="pic_profile bidcorebox_13 cover borderradius_30" />
                 </div>
