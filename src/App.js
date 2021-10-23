@@ -7,6 +7,7 @@ import './res/index.scss';
 import Homecollabsection from './Components/Homecollabsection';
 import Homeaboutsection from './Components/Homeaboutsection';
 import React from 'react';
+import { useEffect } from 'react/cjs/react.development';
 
 function App() {
 
@@ -14,6 +15,20 @@ function App() {
   const paths = {
     "/": [<Homelandingsection />, <Homeprojectssection />, <Homeaboutsection />, <Homecollabsection />],
   }
+
+  useEffect(() => {
+    if (!Object.entries) {
+      Object.entries = function( obj ){
+        var ownProps = Object.keys( obj ),
+            i = ownProps.length,
+            resArray = new Array(i); // preallocate the Array
+        while (i--)
+          resArray[i] = [ownProps[i], obj[ownProps[i]]];
+        
+        return resArray;
+      };
+    }
+  } ,[])
 
   return (
     <BrowserRouter>
