@@ -602,6 +602,17 @@ input[type="radio"] {
   }
 }
 
+.onactive_1 {
+  will-change: opacity;
+  opacity: 0;
+  transition: opacity 357ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  &.active {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
 .btn {
   touch-action: manipulation;
 }

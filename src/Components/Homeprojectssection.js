@@ -32,7 +32,7 @@ export default function Homeprojectsection() {
         </div>
     }
 
-    return (<div className="center corebox_20 col ">
+    return (<div className="center corebox_20 col " id="portfolio">
         <Homeprojectmodal active={active} setModalActive={setModalActive} picturesprev={pictures} urls={urls} />
         <span className="tcenter corebox_5 row items_center center f_4 ffam_karla f700 ls_29 ">My Best works</span>
         <Wrappedrow item={squareElement} list={projects}  basis={47} marginh={22} marginv={22} g="g" className="center maxedcorebox_x23 " />

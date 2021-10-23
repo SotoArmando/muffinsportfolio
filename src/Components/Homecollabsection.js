@@ -4,8 +4,8 @@ export default function Homecollabsection() {
     const [controlledForm,setForm] = useState({})
     const {body, subject, name} = controlledForm;
     const text = {
-        "Interested in collaboration?": "f_5 mar_b19 f600 ls_25 corebox_4 center ffam_inter",
-        "Looking to connect? Send me an e-mail at armandosoto@sotoarmando.com, or check out my profile at sotoarmando.com": "maxedcorebox_x18 tcenter maxedcorebox_3 center ffam_inter",
+        "Interested in collaboration?": "f_5 mar_b19 f600 ls_25 corebox_4  center ffam_karla f800",
+        "Looking to connect? Send me an e-mail at armandosoto@sotoarmando.com, or check out my profile at sotoarmando.com": "maxedcorebox_x20 tcenter maxedcorebox_5 mobilemaxedcorebox_7 center ffam_karla f_1  ",
     }
 
     function handleChange(event) {
@@ -13,10 +13,10 @@ export default function Homecollabsection() {
     }
     
     const Opennewmail = () => {
-        window.open('mailto:armandosoto@sotoarmando.com?subject=' + subject + '&body=' + body + '&name=' + name);
+        window.open('mailto:armandosoto@sotoarmando.com?subject=' + (subject||"Collaboration inquirie") + '&body=' + (body||'Hi Armando,') + '&name=' + name || '[Type here your contact name]');
     }
 
-    return <div className="corebox_19 center col back_2">
+    return <div className="corebox_19 center col back_2 tcenter mobilepad_22" id="contact">
         <div className="col">
         {Object.entries(text).map(([text,classname])=> <span className={classname}>{text}</span>)}
 

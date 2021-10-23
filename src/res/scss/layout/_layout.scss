@@ -484,7 +484,7 @@ a { color: inherit; }
       width: 100%;
     }
     .mobilemaxedcorebox_x#{$i} {
-      min-width: 3.6rem * core($i + 23);
+      width: 100%;
       max-width: 3.6rem * core($i + 23);
     }
     .mobilemaxedcorebox_#{$i} {
