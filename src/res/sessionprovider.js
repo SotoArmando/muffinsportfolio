@@ -13,7 +13,7 @@ export default function sessionProvider({ user, password, nick } = {},
     // eslint-disable-next-line no-debugger
     debugger;
     if (status > 400) {
-      handleUnauthorizederrors([Object.entries(response)]);
+      handleUnauthorizederrors([response]);
     } else {
       handleSuccesfulAuthorization(response);
     }

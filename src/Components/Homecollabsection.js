@@ -4,10 +4,10 @@ import { useState } from "react/cjs/react.development"
 export default function Homecollabsection() {
     const [controlledForm,setForm] = useState({})
     const {body, subject, name} = controlledForm;
-    const text = {
-        "Interested in collaboration?": "f_5 mar_b19 f600 ls_25 corebox_4  center ffam_karla f800",
-        "Looking to connect? Send me an e-mail at armandosoto@sotoarmando.com, or check out my profile at sotoarmando.com": "maxedcorebox_x20 tcenter maxedcorebox_5 mobilemaxedcorebox_7 center ffam_karla f_1  ",
-    }
+    const text = [
+        ["Interested in collaboration?", "f_5 mar_b19 f600 ls_25 corebox_4  center ffam_karla f800"],
+        ["Looking to connect? Send me an e-mail at armandosoto@sotoarmando.com, or check out my profile at sotoarmando.com", "maxedcorebox_x20 tcenter maxedcorebox_5 mobilemaxedcorebox_7 center ffam_karla f_1  "],
+    ]
 
     function handleChange(event) {
         setForm({ ...controlledForm, [event.target.name]: event.target.value });
@@ -19,7 +19,7 @@ export default function Homecollabsection() {
 
     return <div className="corebox_19 center col back_2 tcenter mobilepad_22" id="contact">
         <div className="col">
-        {Object.entries(text).map(([text,classname])=> <span className={classname}>{text}</span>)}
+        {text.map(([text,classname])=> <span className={classname}>{text}</span>)}
 
         <form name="mail" className="maxedcorebox_x20">
             <div className="col center">

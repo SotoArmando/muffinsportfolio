@@ -12,23 +12,9 @@ import { useEffect } from 'react/cjs/react.development';
 function App() {
 
 
-  const paths = {
-    "/": [<Homelandingsection />, <Homeprojectssection />, <Homeaboutsection />, <Homecollabsection />],
-  }
-
-  useEffect(() => {
-    if (!Object.entries) {
-      Object.entries = function( obj ){
-        var ownProps = Object.keys( obj ),
-            i = ownProps.length,
-            resArray = new Array(i); // preallocate the Array
-        while (i--)
-          resArray[i] = [ownProps[i], obj[ownProps[i]]];
-        
-        return resArray;
-      };
-    }
-  } ,[])
+  const paths = [
+    ["/",[<Homelandingsection />, <Homeprojectssection />, <Homeaboutsection />, <Homecollabsection />]]
+  ]
 
   return (
     <BrowserRouter>
@@ -37,7 +23,7 @@ function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-            {Object.entries(paths).map(([k,v]) => <Route path={k} key={k} children={v} /> )}
+            {paths.map(([k,v]) => <Route path={k} key={k} children={v} /> )}
         </Switch>
       </div>
     </BrowserRouter>
