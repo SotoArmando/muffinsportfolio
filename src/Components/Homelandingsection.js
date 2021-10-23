@@ -1,3 +1,4 @@
+import React from 'react';
 import Wrappedrow from './Wrappedrow'
 
 export default function Homelandingsection() {

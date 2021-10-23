@@ -1,3 +1,6 @@
+import React from "react"
+
+
 export default function Homeaboutsection() {
     const text = {
         "About me": "f_4 f800 ls_28 ffam_karla row items_center corebox_3",

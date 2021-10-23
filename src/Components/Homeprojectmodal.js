@@ -1,6 +1,7 @@
-import { useEffect, useRef, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import { act } from "react-dom/test-utils"
 import Wrappedrow from "./Wrappedrow"
+
 
 export default function Homeprojectmodal({active, setModalActive, picturesprev, urls: [liveurl, giturl, tags, description]}) {
 

@@ -6,6 +6,7 @@ import Pathnavigatorhandler from './Containers/Pathnavigatorhandler';
 import './res/index.scss';
 import Homecollabsection from './Components/Homecollabsection';
 import Homeaboutsection from './Components/Homeaboutsection';
+import React from 'react';
 
 function App() {
 
