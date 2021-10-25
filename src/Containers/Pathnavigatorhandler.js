@@ -32,7 +32,19 @@ export default function Pathnavigatorhandler({ paths , gridclassname}) {
     
     return [
     <div ref={backgroundReference} className={`corebox_3`} />,   
-    <div className={`fixed corebox_3 left top back_2 boxshadow_24 z_index0 onactive_1 ${activebackground ? 'active': ''}`} />,   
+    <div className={`fixed corebox_3 left top back_2 boxshadow_24 z_index0 onactive_1 ${activebackground ? 'active': ''}`} >
+        <div className="modal gbasis_40 row allsize z_index4 novisible">
+            <div className="row center">
+                <div className="maxedcorebox_x18 mobilemaxedcorebox_x20 col center items_start">
+                    <span className="ffam_rubik f800 f_4 fore_blue_o0 ls_0 mobilepad_22">AS</span>
+                </div>
+            </div>
+            <div className="row gbasis_36">
+                {social.map((e,i) => 
+                <a href={`#${e}`} className={`center btn_u corebox_3 f_1 f_m_0 ffam_karla ${i === activepath ? " f700 fore_blue_o0" : " f600"} capitalize`}>{`${i === activepath ? '[:' : ''}${e}${i === activepath ? ']' : ''}`}</a>)}
+            </div>
+        </div>
+    </div>,   
     <div className={`${gridclassname || "row  corebox_3 nav  center wrap   ls_30 "} `}>
       
         <div className="modal gbasis_40 row allsize z_index4">
