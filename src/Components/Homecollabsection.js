@@ -48,7 +48,7 @@ export default function Homecollabsection() {
         </form>
       </div>
       <div className='row center'>
-        <Wrappedrow gridclassName="corebox_4 center" basis={29} marginh={18} marginv={22} list={social_networks} item={({ _id: [text, link], marginh, marginv }) => <a className={`corebox_x1  back_blue_o0 maskicon_${text} mar_t${marginv} mar_b${marginv} mar_r${marginh} mar_l${marginh}`} href={link} target="_blank" rel="noreferrer" aria-hi />} />
+        <Wrappedrow  gridclassName="corebox_4 center" basis={29} marginh={18} marginv={22} list={social_networks} item={({ _id: [text, link], marginh, marginv }) => <a className={`corebox_x1  back_blue_o0 maskicon_${text} mar_t${marginv} mar_b${marginv} mar_r${marginh} mar_l${marginh}`} href={link} target="_blank" rel="noreferrer" aria-hi />} />
       </div>
 
     </div>
