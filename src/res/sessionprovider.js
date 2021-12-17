@@ -1,5 +1,5 @@
 import SHA256 from 'crypto-js/sha256';
-import { dbkeys, fetcher } from '../fetch';
+import { dbkeys, fetcher } from '../fetch.jsya';
 
 export default function sessionProvider({ user, password, nick } = {},
   handleSuccesfulAuthorization,
