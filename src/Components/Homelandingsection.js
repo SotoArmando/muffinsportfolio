@@ -3,8 +3,8 @@ import Wrappedrow from './Wrappedrow';
 
 export default function Homelandingsection() {
   const hometext = [
-    ['Pretty code by ingenious person', 'f_7 f700  ffam_karla maxedcorebox_x17 corebox_9 mobilecorebox_11'],
-    ['Hello I am a software developer! I can help you build a product, featre or website. Look through some of my work and experience! If you like what you see and have project you need coded, don’t hesistate to contact me.', 'f_1 ffam_karla  f_m_1 ls_30 fore_6'],
+    ['An Pretty code by ingenious person', 'f_7 f700  ffam_karla maxedcorebox_x17 corebox_9 mobilecorebox_11'],
+    ['Hello I am a software developer! I can help you build a product, feature or website. Look through some of my work and experience! If you like what you see and have project you need coded, don’t hesistate to contact me.', 'f_1 ffam_karla  f_m_1 ls_30 fore_6'],
   ];
 
   const social_networks = [
